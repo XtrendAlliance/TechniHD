@@ -2253,10 +2253,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel position="center,558" size="1280,42" zPosition="-1" backgroundColor="ddblau">
     </eLabel>
     <widget source="session.CurrentService" render="Label" backgroundColor="hblau" transparent="1" position="324,606" size="96,27" font="Regular2;21" halign="left">
-      <convert type="ServiceEndTime">EndTime</convert>
+      <convert type="THDServiceEndTime">EndTime</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" backgroundColor="hblau" transparent="1" position="224,606" size="96,27" font="Regular2;21" halign="right">
-      <convert type="ServiceStartTime">StartTime</convert>
+      <convert type="THDServiceStartTime">StartTime</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" backgroundColor="ddblau" position="249,565" size="96,27" font="Regular;22" halign="right">
       <convert type="ServicePosition">Position,ShowHours</convert>
