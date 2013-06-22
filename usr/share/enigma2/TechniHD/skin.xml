@@ -111,11 +111,11 @@
   <windowstyle type="skinned" id="0">
     <title offset="25,15" font="Regular;22">
     </title>
-    <color name="Background" color="dblauBACK">
+    <color name="Background" color="dblau">
     </color>
     <color name="LabelForeground" color="white">
     </color>
-    <color name="ListboxBackground" color="dblauBACK">
+    <color name="ListboxBackground" color="dblau">
     </color>
     <color name="ListboxForeground" color="white">
     </color>
@@ -1566,7 +1566,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
     </eLabel>
   </screen>
   <screen name="Console" position="255,140" size=" 770,460" title="Command execution...">
-    <widget name="text" position="10,10" size="750,440" font="Console;18" transparent="1" backgroundColor="backtop">
+    <widget name="text" position="10,10" size="750,440" font="Console;18" transparent="1" backgroundColor="dblau">
     </widget>
   </screen>
   <screen name="CutListEditor" position="0,0" size="1280,720" title="CutListEditor" flags="wfNoBorder" backgroundColor="transparent">
@@ -1574,13 +1574,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
     </widget>
     <eLabel position="484,123" size="700,380" zPosition="3" backgroundColor="#ff000000">
     </eLabel>
-    <widget source="session.CurrentService" render="Label" position="487,548" size="700,25" zPosition="10" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="487,548" size="700,25" zPosition="10" font="Regular;20" halign="center" valign="center" backgroundColor="dblau" transparent="1">
       <convert type="ServicePosition">Position,Detailed</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="487,518" size="700,23" zPosition="10" font="Regular; 22" halign="center" valign="center" backgroundColor="background" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="487,518" size="700,23" zPosition="10" font="Regular; 22" halign="center" valign="center" backgroundColor="dblau" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="cutlist" render="Listbox" position="34,126" size="304,464" zPosition="10" scrollbarMode="showOnDemand" transparent="0">
+    <widget source="cutlist" render="Listbox" position="34,126" size="304,464" zPosition="10" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=(10,2), size=(250, 25), text = 1, backcolor = MultiContentTemplateColor(3)),
