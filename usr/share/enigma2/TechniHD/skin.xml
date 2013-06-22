@@ -4649,7 +4649,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </eLabel>
     <eLabel position="482,148" size="726,436" zPosition="6" backgroundColor="dblau">
     </eLabel>
-    <widget name="checkList" position="490,156" size="710,420" zPosition="8" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+    <widget name="list" position="490,156" size="710,420" zPosition="8" itemHeight="30" backgroundColor="dblau" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
     </widget>
     <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
     </ePixmap>
