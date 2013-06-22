@@ -2377,7 +2377,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget name="freeDiskSpace" position="80,106" size="562,24" font="hd; 20" valign="center" backgroundColor="background" transparent="1" zPosition="6">
     </widget>
-    <widget name="list" position="73,148" selectionPixmap="TechniHD/menu/sel1280x40.png" itemHeight="40" font="Regular3;38" alphatest="blend" size="573,438" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="hblau" scrollbarMode="showOnDemand">
+    <widget name="list" position="73,148" selectionPixmap="TechniHD/menu/sel1280x40.png" itemHeight="40" font="Regular3;38" alphatest="blend" size="573,440" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="hblau" scrollbarMode="showOnDemand">
     </widget>
     <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="999,634" size="60,40" alphatest="blend">
     </ePixmap>
