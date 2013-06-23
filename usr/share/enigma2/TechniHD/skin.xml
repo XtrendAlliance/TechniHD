@@ -4800,7 +4800,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_green" render="Label" zPosition="4" position="410,637" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
     </widget>
   </screen>
-  <screen name="PluginDetails" position="0,0" size="1280,720" title="PluginDetails" backgroundColor="transparent" flags="wfNoBorder" transparent="1">
+  <screen name="PluginDetails" position="0,0" size="1280,720" title="PluginDetails" backgroundColor="transparent" flags="wfNoBorder">
     <eLabel position="490,207" zPosition="10" size="700,1" backgroundColor="grey">
     </eLabel>
     <widget name="detailtext" zPosition="7" position="820,220" size="370,393" font="Regular;22" backgroundColor="dblau" transparent="1">
