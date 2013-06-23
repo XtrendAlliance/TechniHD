@@ -4803,7 +4803,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="PluginDetails" position="0,0" size="1280,720" title="PluginDetails" backgroundColor="transparent" flags="wfNoBorder">
     <eLabel position="490,207" zPosition="10" size="700,1" backgroundColor="grey">
     </eLabel>
-    <widget name="detailtext" zPosition="7" position="820,220" size="370,393" font="Regular;22" backgroundColor="dblau" transparent="1">
+    <widget name="detailtext" position="820,220" size="370,393" font="Regular;22" backgroundColor="dblau" transparent="1">
     </widget>
     <widget name="screenshot" position="490,220" size="320,230" zPosition="10" alphatest="on" transparent="1">
     </widget>
@@ -4817,7 +4817,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </ePixmap>
     <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
     </ePixmap>
-    <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
+    <eLabel position="0,102" size="1280,516" zPosition="-1" backgroundColor="dblau">
     </eLabel>
     <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
     </eLabel>
