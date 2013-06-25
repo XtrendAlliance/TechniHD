@@ -44,7 +44,7 @@ class AudioInfo(Converter, object):
 					lang = language.getLanguage()
                                         # set not the following "word" (lang) in your own language, it will not work.... 
                                         if lang == 'de_DE':
-                                                if "Englisch" in languages or "English" in languages or "Spanish" in languages or "Turkish" in languages or "Kommentar" in languages or "Stadion" in languages or "stereo englisch" in languages or "franz" in languages or "Italian" in languages or "Russian" in languages or "French" in languages or "Italienisch" in languages:
+                                                if "Englisch" in languages or "English" in languages or "Spanish" in languages or "Turkish" in languages or "Kommentar" in languages or "Stadion" in languages or "stereo englisch" in languages or "franz" in languages or "Franz\xc3\xb6sisch" in languages or "Italian" in languages or "Russian" in languages or "French" in languages or "Italienisch" in languages:
 						        return True
                                         elif lang == 'en_EN':
                                                 if "Deutsch" in languages or "German" in languages:
