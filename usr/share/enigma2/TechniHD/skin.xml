@@ -5276,24 +5276,23 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
   </screen>
   <!-- XTPanel skinned -->
-  <screen name="XTMainMenu" position="0,0" size="1280,720" title="Package list update" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="menu" render="FixedLabel" text="P a n e l" shadowColor="black" shadowOffset="2,1" position="87,374" size="216,45" zPosition="6" font="Regular3; 45" halign="left" backgroundColor="hblau" transparent="1" valign="center">
-      <convert type="MenuEntryCompare">XTMainMenu</convert>
-      <convert type="ConditionalShowHide">
+  <screen name="XTMainMenu" position="0,0" size="1280,720" title="XTA Panel" flags="wfNoBorder" backgroundColor="transparent">
+   <eLabel text="P a n e l" shadowColor="black" shadowOffset="2,1" position="87,374" size="216,45" zPosition="6" font="Regular3; 45" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+   </eLabel>
+   <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+   </eLabel>
+   <widget source="list" render="Listbox" itemHeight="70" zPosition="5" alphatest="blend" position="415,150" size="800,450" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
+      <convert type="TemplatedMultiContent">
+                               {"template": [
+                               MultiContentEntryText(pos = (130, 7), size = (800, 30), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00f7ba00, color_sel = 0x00000000), # index 2 is the entry
+                               MultiContentEntryText(pos = (130, 35), size = (840, 26), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00989797, color_sel = 0x00000000), # index 2 is the description
+                               MultiContentEntryPixmapAlphaTest(pos = (2, 1), size = (100, 50), png = 3), # index 4 is the status pixmap
+                               ],
+                               "fonts": [gFont("Regular", 24),gFont("Regular2", 17)],
+                               "itemHeight": 58
+                               }
       </convert>
     </widget>
-    <widget source="menu" render="FixedLabel" text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
-      <convert type="MenuEntryCompare">XTMainMenu</convert>
-      <convert type="ConditionalShowHide">
-      </convert>
-    </widget>
-    <widget source="list" render="Listbox" selectionPixmap="TechniHD/menu/sel1280x40.png" zPosition="5" alphatest="blend" position="409,121" size="800,490" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
-    <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (10, 7), size = (800, 30), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 40
-				}
-			</convert></widget>
     <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/tv-logo.png" transparent="1" alphatest="blend">
     </ePixmap>
     <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
@@ -5323,14 +5322,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </ePixmap>
     <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="828,634" size="40,40" alphatest="blend">
     </ePixmap>
-    <widget name="key_red" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
-    </widget>
-    <widget name="key_green" position="378,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
-    </widget>
-    <widget name="key_yellow" position="616,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
-    </widget>
-    <widget name="key_blue" position="861,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
-    </widget>
+    <eLabel text="Close" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    </eLabel>
+    <eLabel text="System Infos" position="378,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    </eLabel>
+    <eLabel text="XT Forum Reader" position="616,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    </eLabel>
+    <eLabel text="XT Support Addons" position="861,637" size="230,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    </eLabel>
   </screen>
   <screen name="XTSubMenu" position="center,73" size="1147,604" title="XT Sub Menu">
     <ePixmap pixmap="~/pictures/small_red.png" position="6,566" size="150,50" alphatest="on" />
