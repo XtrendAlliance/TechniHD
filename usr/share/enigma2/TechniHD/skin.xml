@@ -5281,18 +5281,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
    </eLabel>
    <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
    </eLabel>
-   <widget source="list" render="Listbox" itemHeight="70" zPosition="5" alphatest="blend" position="415,150" size="800,450" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
+   <widget source="list" render="Listbox" zPosition="5" alphatest="blend" position="415,150" size="800,450" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
       <convert type="TemplatedMultiContent">
                                {"template": [
                                MultiContentEntryText(pos = (130, 7), size = (800, 30), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00f7ba00, color_sel = 0x00000000), # index 2 is the entry
                                MultiContentEntryText(pos = (130, 35), size = (840, 26), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00989797, color_sel = 0x00000000), # index 2 is the description
                                MultiContentEntryPixmapAlphaTest(pos = (2, 1), size = (100, 50), png = 3), # index 4 is the status pixmap
                                ],
-                               "fonts": [gFont("Regular", 24),gFont("Regular2", 17)],
-                               "itemHeight": 58
+                               "fonts": [gFont("Regular", 24),gFont("Regular2", 19)],
+                               "itemHeight": 60
                                }
       </convert>
-    </widget>
+  </widget>
     <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/tv-logo.png" transparent="1" alphatest="blend">
     </ePixmap>
     <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
@@ -5322,32 +5322,56 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </ePixmap>
     <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="828,634" size="40,40" alphatest="blend">
     </ePixmap>
-    <eLabel text="Close" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
-    </eLabel>
-    <eLabel text="System Infos" position="378,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
-    </eLabel>
-    <eLabel text="XT Forum Reader" position="616,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
-    </eLabel>
-    <eLabel text="XT Support Addons" position="861,637" size="230,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
-    </eLabel>
-  </screen>
-  <screen name="XTSubMenu" position="center,73" size="1147,604" title="XT Sub Menu">
-    <ePixmap pixmap="~/pictures/small_red.png" position="6,566" size="150,50" alphatest="on" />
-    <widget source="key_red" render="Label" position="7,528" zPosition="1" size="150,50" font="Regular;20" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
-    <widget source="list" render="Listbox" position="430,49" size="714,532" scrollbarMode="showOnDemand">
-      <convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryPixmapAlphaTest(pos = (2, 2), size = (44, 44), png = 3), # index 4 is the status pixmap
-						MultiContentEntryText(pos = (52, 2), size = (980, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 0 is the MenuText,
-						MultiContentEntryText(pos = (52, 26), size = (980, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 0 is the MenuText,
-					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
-				"itemHeight": 48
-				}
-			</convert>
+    <widget source="key_red" render="Label" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
     </widget>
-    <!-- Infoline		<widget source="status" render="Label" position="15,310" size="430,40" halign="center" valign="center" font="Regular;22" transparent="1" shadowColor="black" shadowOffset="-1,-1" /> -->
-    <widget source="session.VideoPicture" render="Pig" position="17,180" size="346,208" zPosition="3" backgroundColor="unff000000" />
+    <widget source="key_green" render="Label" position="378,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    </widget>
+    <widget source="key_yellow" render="Label" position="616,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    </widget>
+    <widget source="key_blue" render="Label" position="861,637" size="230,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    </widget>
+  </screen>
+  <screen name="XTSubMenu" position="0,0" size="1280,720" title="XTA Sub Menu" flags="wfNoBorder" backgroundColor="transparent">
+   <eLabel text="P a n e l" shadowColor="black" shadowOffset="2,1" position="87,374" size="216,45" zPosition="6" font="Regular3; 45" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+   </eLabel>
+   <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+   </eLabel>
+   <widget source="Title" render="Label" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+   <widget source="list" render="Listbox" zPosition="5" alphatest="blend" position="415,130" size="800,470" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
+      <convert type="TemplatedMultiContent">
+                               {"template": [
+                               MultiContentEntryText(pos = (80, 7), size = (800, 30), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00f7ba00, color_sel = 0x00000000), # index 2 is the entry
+                               MultiContentEntryText(pos = (80, 35), size = (840, 26), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00989797, color_sel = 0x00000000), # index 2 is the description
+                               MultiContentEntryPixmapAlphaTest(pos = (5, 10), size = (44, 44), png = 3), # index 4 is the status pixmap
+                               ],
+                               "fonts": [gFont("Regular", 24),gFont("Regular2", 19)],
+                               "itemHeight": 58
+                               }
+      </convert>
+   </widget>
+    <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/tv-logo.png" transparent="1" alphatest="blend">
+    </ePixmap>
+    <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+    </ePixmap>
+    <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+    </ePixmap>
+    <eLabel position="center,100" size="1280,516" zPosition="2" backgroundColor="dblau">
+    </eLabel>
+    <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
+    </eLabel>
+    <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+      <convert type="THDClockToText">ShortDay</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+      <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+    <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+    </ePixmap>
+    <widget source="key_red" render="Label" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    </widget>
   </screen>
   <!-- Take care: Screen is used for both IPK Uninstaller and Enigma2 Crashlogremover in Systemtools Submenu -->
   <screen name="XTStatusListMenu" position="center,110" size="625,360" title="XT Status List Menu">
