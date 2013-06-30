@@ -5373,6 +5373,129 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_red" render="Label" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
     </widget>
   </screen>
+  <screen name="ScNewSelection" position="0,0" size="1280,720" title="Softcam Setup" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
+  <eLabel position="479,440" size="730,23" zPosition="3" backgroundColor="dblau2">
+  </eLabel>
+  <eLabel position="479,469" size="730,23" zPosition="3" backgroundColor="dblau2">
+  </eLabel>
+  <eLabel position="479,498" size="730,23" zPosition="3" backgroundColor="dblau2">
+  </eLabel>
+  <eLabel position="479,527" size="730,23" zPosition="3" backgroundColor="dblau2">
+  </eLabel>
+  <eLabel position="479,556" size="730,23" zPosition="3" backgroundColor="dblau2">
+  </eLabel>
+  <widget name="entries" itemHeight="29" position="479,440" size="730,146" font="Regular;20" zPosition="10" halign="left" foregroundColor="white" backgroundColor="dblau2" transparent="1" />
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/tv-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="Softcam Setup" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <ePixmap pixmap="TechniHD/icons/camd.png" position="70,220" size="250,250" zPosition="5" alphatest="blend">
+</ePixmap>
+  <widget name="cam" position="480,120" size="365,30" font="Regular;20" backgroundColor="hblau2" transparent="0" zPosition="6" halign="center">
+</widget>
+  <widget name="server" position="845,120" size="365,30" font="Regular;20" backgroundColor="hblau2" foregroundColor="#f7ba00" transparent="0" zPosition="6" halign="center">
+</widget>
+  <eLabel position="480,146" size="730,280" zPosition="5" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="482,148" size="726,276" zPosition="6" backgroundColor="dblau">
+  </eLabel>
+  <widget name="text" position="485,156" size="356,260" zPosition="7" font="Regular2;17" alphatest="blend" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
+</widget>
+  <widget name="text2" position="850,156" size="356,260" zPosition="7" font="Regular2;17" alphatest="blend" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="#f7ba00" backgroundColor="dblau" transparent="1">
+</widget>
+  <widget name="key_green" position="335,637" size="153,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+</widget>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="297,634" size="40,40" alphatest="blend">
+</ePixmap>
+  <ePixmap position="80,490" size="110,110" zPosition="2" pixmap="TechniHD/icons/net.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+</widget>
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="999,634" size="60,40" alphatest="blend">
+  </ePixmap>
+  <eLabel text="Settings" position="1058,637" size="210,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </eLabel>
+</screen>
+  <screen name="ScSetupScreen" position="center,center" size="656,270" flags="wfNoBorder" title="Settings menu" backgroundColor="grey">
+  <eLabel position="153,58" size="480,1" zPosition="4" backgroundColor="grey" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/XTPanel/pictures/camcenter.png" zPosition="4" position="11,110" size="104,60" alphatest="blend" />
+  <eLabel text="Softcam Settings Menu" position="153,13" size="480,38" zPosition="5" font="Regular; 25" halign="center" backgroundColor="dblau" transparent="1" valign="center" />
+  <eLabel position="124,1" size="531,268" zPosition="2" backgroundColor="dblau" />
+  <eLabel position="1,1" size="125,268" zPosition="3" backgroundColor="hblau" />
+  <widget name="config" position="153,88" size="480,165" zPosition="4" font="Regular2; 20" halign="center" backgroundColor="dblau" transparent="1" />
+  </screen>
+  <screen name="AutoCamListSetup" position="0,0" size="1280,720" title="Auto-Camd List Setup" flags="wfNoBorder" backgroundColor="transparent">
+   <ePixmap pixmap="TechniHD/icons/camd.png" position="70,220" size="250,250" zPosition="5" alphatest="blend">
+   </ePixmap>
+   <widget source="list" render="Listbox" zPosition="5" alphatest="blend" position="415,140" size="800,450" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
+      <convert type="TemplatedMultiContent">                             
+				{"template": [
+						MultiContentEntryText(pos = (10, 5), size = (420, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00f7ba00, color_sel = 0x00000000),
+						MultiContentEntryText(pos = (10, 30), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00989797, color_sel = 0x00000000),
+						MultiContentEntryText(pos = (630, 13), size = (140, 24), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00989797, color_sel = 0x00000000),
+					],
+				 "fonts": [gFont("Regular", 21), gFont("Regular2", 18)],
+				 "itemHeight": 50
+				}
+			</convert>
+  </widget>
+    <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/tv-logo.png" transparent="1" alphatest="blend">
+    </ePixmap>
+    <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+    </ePixmap>
+    <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+    </ePixmap>
+    <eLabel position="center,100" size="1280,520" zPosition="2" backgroundColor="dblau">
+    </eLabel>
+    <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
+    </eLabel>
+    <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+      <convert type="THDClockToText">ShortDay</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+      <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+    <eLabel text="Auto-Camd List Setup" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+    </eLabel>
+    <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+    </ePixmap>
+    <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="344,634" size="40,40" alphatest="blend">
+    </ePixmap>
+    <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="584,634" size="40,40" alphatest="blend">
+    </ePixmap>
+    <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="828,634" size="40,40" alphatest="blend">
+    </ePixmap>
+    <widget name="key_red" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    </widget>
+    <widget name="key_green" position="378,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    </widget>
+    <widget name="key_yellow" position="616,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    </widget>
+    <widget name="key_blue" position="861,637" size="230,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    </widget>
+  </screen>
   <!-- Take care: Screen is used for both IPK Uninstaller and Enigma2 Crashlogremover in Systemtools Submenu -->
   <screen name="XTStatusListMenu" position="center,110" size="625,360" title="XT Status List Menu">
     <widget name="pic_red" pixmap="~/pictures/red.png" position="5,5" size="150,50" alphatest="on" />
@@ -5619,29 +5742,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
     </ePixmap>
     <eLabel text="back" position="328,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
     </eLabel>
-  </screen>
-  <screen name="AutoCamListSetup" position="center,center" size="840,570" title="Auto-Camd List Setup" flags="wfNoBorder">
-    <ePixmap position="0,1" zPosition="-10" size="840,570" pixmap="Lava/menu/menubg.png" />
-    <ePixmap position="40,544" zPosition="1" size="170,2" pixmap="/usr/lib/enigma2/python/Plugins/PLi/SoftcamSetup/images/red.png" transparent="1" alphatest="on" />
-    <ePixmap position="213,544" zPosition="1" size="170,2" pixmap="/usr/lib/enigma2/python/Plugins/PLi/SoftcamSetup/images/green.png" transparent="1" alphatest="on" />
-    <ePixmap position="387,544" zPosition="1" size="170,2" pixmap="/usr/lib/enigma2/python/Plugins/PLi/SoftcamSetup/images/yellow.png" transparent="1" alphatest="on" />
-    <ePixmap position="561,544" zPosition="1" size="170,2" pixmap="/usr/lib/enigma2/python/Plugins/PLi/SoftcamSetup/images/blue.png" transparent="1" alphatest="on" />
-    <widget name="key_red" position="40,498" zPosition="1" size="170,42" font="Regular;18" halign="center" valign="bottom" transparent="1" />
-    <widget name="key_green" position="213,498" zPosition="1" size="170,42" font="Regular;18" halign="center" valign="bottom" transparent="1" />
-    <widget name="key_yellow" position="387,498" zPosition="1" size="170,42" font="Regular;18" halign="center" valign="bottom" transparent="1" />
-    <widget name="key_blue" position="561,498" zPosition="1" size="170,42" font="Regular;18" halign="center" valign="bottom" transparent="1" />
-    <widget source="list" render="Listbox" position="83,71" size="660,310" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (10, 5), size = (420, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0),
-						MultiContentEntryText(pos = (50, 30), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT, text = 1),
-						MultiContentEntryText(pos = (430, 13), size = (140, 24), font = 0, flags = RT_HALIGN_LEFT, text = 2),
-					],
-				 "fonts": [gFont("Regular", 21), gFont("Regular", 16)],
-				 "itemHeight": 50
-				}
-			</convert>
-    </widget>
   </screen>
   <screen name="XTProcInfo" position="center,center" size="820,615" title="Running Process Info">
     <widget name="pibartit" zPosition="2" position="10,20" size="810,30" font="Regular;22" valign="center" transparent="1" foregroundColor="white" backgroundColor="transpBlack" />
