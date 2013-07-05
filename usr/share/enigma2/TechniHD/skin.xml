@@ -5373,7 +5373,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_red" render="Label" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
     </widget>
   </screen>
-  <screen name="ScNewSelection" position="0,0" size="1280,720" title="Softcam Setup" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
+  <screen name="ScNewSelection" position="0,0" size="1280,720" title="Softcam Setup" backgroundColor="transparent" flags="wfNoBorder">
   <eLabel position="479,440" size="730,23" zPosition="3" backgroundColor="dblau2">
   </eLabel>
   <eLabel position="479,469" size="730,23" zPosition="3" backgroundColor="dblau2">
@@ -5391,7 +5391,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </ePixmap>
   <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
   </ePixmap>
-  <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
+  <eLabel position="0,102" size="1280,516" zPosition="-2" backgroundColor="dblau">
   </eLabel>
   <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
   </eLabel>
@@ -5408,41 +5408,54 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </eLabel>
   <ePixmap pixmap="TechniHD/icons/camd.png" position="70,220" size="250,250" zPosition="5" alphatest="blend">
 </ePixmap>
-  <widget name="cam" position="480,120" size="365,30" font="Regular;20" backgroundColor="hblau2" transparent="0" zPosition="6" halign="center">
+  <widget name="cam" position="480,125" size="365,30" font="Regular;20" backgroundColor="hblau2" transparent="0" zPosition="6" halign="center">
 </widget>
-  <widget name="server" position="845,120" size="365,30" font="Regular;20" backgroundColor="hblau2" foregroundColor="#f7ba00" transparent="0" zPosition="6" halign="center">
+  <widget name="server" position="845,125" size="365,30" font="Regular;20" backgroundColor="hblau2" foregroundColor="#f7ba00" transparent="0" zPosition="6" halign="center">
 </widget>
-  <eLabel position="480,146" size="730,280" zPosition="5" backgroundColor="grey">
+  <eLabel position="480,146" size="730,280" zPosition="-2" backgroundColor="grey">
   </eLabel>
-  <eLabel position="482,148" size="726,276" zPosition="6" backgroundColor="dblau">
+  <eLabel position="482,148" size="726,276" zPosition="-1" backgroundColor="dblau">
   </eLabel>
-  <widget name="text" position="485,156" size="356,260" zPosition="7" font="Regular2;17" alphatest="blend" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1">
+  <widget name="text" position="490,156" size="356,260" zPosition="2" font="Regular2;17">
 </widget>
-  <widget name="text2" position="850,156" size="356,260" zPosition="7" font="Regular2;17" alphatest="blend" enableWrapAround="1" scrollbarMode="showOnDemand" foregroundColor="#f7ba00" backgroundColor="dblau" transparent="1">
+  <widget name="text1" position="850,156" size="356,260" zPosition="2" font="Regular2;17">
 </widget>
   <widget name="key_green" position="335,637" size="153,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
-</widget>
+  </widget>
   <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="297,634" size="40,40" alphatest="blend">
-</ePixmap>
+  </ePixmap>
   <ePixmap position="80,490" size="110,110" zPosition="2" pixmap="TechniHD/icons/net.png" transparent="1" alphatest="blend">
   </ePixmap>
   <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
   </ePixmap>
-  <widget name="key_red" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
-</widget>
+  <widget name="key_blue" position="535,637" size="153,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="498,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="135,637" size="153,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="999,634" size="60,40" alphatest="blend">
+  </ePixmap>
+  <eLabel text="Settings" position="1058,637" size="210,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </eLabel>
   <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="999,634" size="60,40" alphatest="blend">
   </ePixmap>
   <eLabel text="Settings" position="1058,637" size="210,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
   </eLabel>
 </screen>
-  <screen name="ScSetupScreen" position="center,center" size="656,270" flags="wfNoBorder" title="Settings menu" backgroundColor="grey">
+  <screen name="ScSetupScreen" position="center,center" size="656,290" flags="wfNoBorder" title="Settings menu" backgroundColor="grey">
   <eLabel position="153,58" size="480,1" zPosition="4" backgroundColor="grey" />
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/XTPanel/pictures/camcenter.png" zPosition="4" position="11,110" size="104,60" alphatest="blend" />
   <eLabel text="Softcam Settings Menu" position="153,13" size="480,38" zPosition="5" font="Regular; 25" halign="center" backgroundColor="dblau" transparent="1" valign="center" />
-  <eLabel position="124,1" size="531,268" zPosition="2" backgroundColor="dblau" />
-  <eLabel position="1,1" size="125,268" zPosition="3" backgroundColor="hblau" />
-  <widget name="config" position="153,88" size="480,165" zPosition="4" font="Regular2; 20" halign="center" backgroundColor="dblau" transparent="1" />
-  </screen>
+  <eLabel position="124,1" size="531,288" zPosition="2" backgroundColor="dblau" />
+  <eLabel position="1,1" size="125,288" zPosition="3" backgroundColor="hblau" />
+  <widget name="config" position="153,70" size="480,165" zPosition="4" font="Regular2; 20" halign="center" backgroundColor="dblau" transparent="1" />
+  <eLabel position="153,243" size="480,1" zPosition="4" backgroundColor="grey" />
+  <widget name="green" position="465,254" size="153,26" zPosition="4" font="hdi; 22" halign="left" backgroundColor="dblau" transparent="1" valign="center" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="429,252" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="192,251" size="40,40" alphatest="blend" />
+  <widget name="red" position="229,254" size="153,26" zPosition="4" font="hdi; 22" halign="left" backgroundColor="dblau" transparent="1" valign="center" />
+</screen>
   <screen name="AutoCamListSetup" position="0,0" size="1280,720" title="Auto-Camd List Setup" flags="wfNoBorder" backgroundColor="transparent">
    <ePixmap pixmap="TechniHD/icons/camd.png" position="70,220" size="250,250" zPosition="5" alphatest="blend">
    </ePixmap>
@@ -5450,7 +5463,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="TemplatedMultiContent">                             
 				{"template": [
 						MultiContentEntryText(pos = (10, 5), size = (420, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00f7ba00, color_sel = 0x00000000),
-						MultiContentEntryText(pos = (10, 30), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00989797, color_sel = 0x00000000),
+						MultiContentEntryText(pos = (10, 24), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00989797, color_sel = 0x00000000),
 						MultiContentEntryText(pos = (630, 13), size = (140, 24), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00989797, color_sel = 0x00000000),
 					],
 				 "fonts": [gFont("Regular", 21), gFont("Regular2", 18)],
