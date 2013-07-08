@@ -199,6 +199,52 @@
     </color>
   </windowstyle>
   <!--EMC Start-->
+  <screen name="EnhancedMovieCenterMenu" position="0,0" size="1280,720" title="EnhancedMovieCenterMenu" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap position="76,5" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="center,0" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="center,662" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,54" size="1280,616" zPosition="-4" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="34,143" size="790,458" zPosition="3" backgroundColor="grey">
+  </eLabel>
+  <widget source="session.VideoPicture" render="Pig" position="863,143" size="380,215" backgroundColor="#ff000000" />
+  <eLabel position="34,117" size="791,2" zPosition="9" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="36,146" size="786,452" zPosition="4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="E n h a n c e d  M o v i e  C e n t e r" shadowColor="black" shadowOffset="3,2" position="141,14" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <widget source="Title" render="Label" shadowColor="black" shadowOffset="2,1" position="33,85" zPosition="5" size="791,30" font="Regular2; 20" backgroundColor="background" transparent="1" halign="center" />
+  <widget name="config" itemHeight="30" position="44,162" size="771,421" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="dblau" scrollbarMode="showOnDemand">
+  </widget>
+  <widget source="help" render="Label" zPosition="5" position="863,386" size="380,204" font="Regular3; 20" foregroundColor="white" backgroundColor="dblau" transparent="1" halign="center" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="309,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="509,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="135,679" size="171,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_green" position="342,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget> 
+  <widget name="key_blue" position="542,679" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/plusminus.png" zPosition="4" position="1125,678" size="60,40" alphatest="blend">
+  </ePixmap>
+</screen>
   <screen name="imdbSetup" position="0,0" size="1280,720" title="EMC Cover search setup" flags="wfNoBorder" backgroundColor="transparent">
   <ePixmap position="76,5" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
   </ePixmap>
