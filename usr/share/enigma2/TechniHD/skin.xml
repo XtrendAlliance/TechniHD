@@ -199,6 +199,136 @@
     </color>
   </windowstyle>
   <!--EMC Start-->
+  <screen name="imdbSetup" position="0,0" size="1280,720" title="EMC Cover search setup" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap position="76,5" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="center,0" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="center,662" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,54" size="1280,616" zPosition="-4" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="34,143" size="790,358" zPosition="3" backgroundColor="grey">
+  </eLabel>
+  <widget source="session.VideoPicture" render="Pig" position="863,143" size="380,215" backgroundColor="#ff000000" />
+  <eLabel position="34,117" size="791,2" zPosition="9" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="36,146" size="786,352" zPosition="4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="E n h a n c e d  M o v i e  C e n t e r" shadowColor="black" shadowOffset="3,2" position="141,14" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <eLabel text="Movie Cover Search Setup" shadowColor="black" shadowOffset="2,1" position="33,85" zPosition="5" size="791,30" font="Regular2; 20" backgroundColor="background" transparent="1" halign="center">
+  </eLabel>
+  <widget name="config" position="44,157" size="771,331" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="hblau" scrollbarMode="showOnDemand">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="309,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="135,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_green" position="342,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget> 
+</screen>
+  <screen name="getCover" position="0,0" size="1280,720" title="EMC Cover search" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel text="EMC Cover Selecter" shadowColor="black" shadowOffset="2,1" position="33,88" zPosition="5" size="791,52" font="Regular2; 25" backgroundColor="background" transparent="1" halign="center" />
+  <ePixmap pixmap="TechniHD/buttons/ok.png" zPosition="4" position="291,678" size="40,40" alphatest="blend" />
+  <widget name="info" zPosition="4" position="863,378" size="380,30" font="Regular2; 24" foregroundColor="white" backgroundColor="dblau" transparent="1" halign="center" />
+  <ePixmap position="76,5" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="center,0" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="center,662" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="0,54" size="1280,616" zPosition="-4" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="34,169" size="790,485" zPosition="3" backgroundColor="grey">
+  </eLabel>
+  <widget source="session.VideoPicture" render="Pig" position="863,143" size="380,215" backgroundColor="#ff000000" />
+  <widget name="poster" position="968,428" size="160,225" alphatest="blend" zPosition="5" />
+  <eLabel position="34,143" size="790,2" zPosition="9" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="36,172" size="786,480" zPosition="4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="E n h a n c e d  M o v i e  C e n t e r" shadowColor="black" shadowOffset="3,2" position="141,10" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <widget name="menulist" FrontColorSel="#000000" BackColorSel="#ffffff" position="44,180" selectionPixmap="TechniHD/menu/sel1280x30.png" itemHeight="30" alphatest="blend" size="771,465" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="hblau" scrollbarMode="showOnDemand">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/exit.png" zPosition="4" position="57,678" size="60,40" alphatest="blend">
+  </ePixmap>
+  <eLabel text="back" position="119,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="Select" position="326,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+</screen>
+  <screen name="EMCImdbScan" position="0,0" size="1280,720" title="EMC Cover search" flags="wfNoBorder" backgroundColor="transparent">
+  <widget name="m_info" shadowColor="black" shadowOffset="2,1" position="33,88" zPosition="5" size="791,52" font="Regular2; 25" backgroundColor="background" transparent="1" halign="center" />
+  <ePixmap pixmap="TechniHD/buttons/ok.png" zPosition="4" position="974,677" size="40,40" alphatest="blend" />
+  <eLabel text="EMC Cover search" zPosition="4" position="863,362" size="380,30" font="Regular2; 24" foregroundColor="white" backgroundColor="dblau" transparent="1" halign="center" />
+  <widget name="done_msg" zPosition="4" position="864,394" size="380,27" font="Regular3; 19" foregroundColor="white" backgroundColor="dblau" transparent="1" halign="center"/>
+  <widget name="info" position="1036,466" size="207,26" zPosition="0" font="Regular;21" halign="left" valign="center" transparent="1" foregroundColor="white" backgroundColor="dblau" />
+  <widget name="exist" position="1036,503" size="207,26" zPosition="4" font="Regular;21" halign="left" valign="center" transparent="1" foregroundColor="white" backgroundColor="dblau" />
+  <widget name="no_poster" position="1036,538" size="207,26" zPosition="4" font="Regular;21" halign="left" valign="center" transparent="1" foregroundColor="white" backgroundColor="dblau" />
+  <widget name="download" position="1036,572" size="207,26" zPosition="4" font="Regular;21" halign="left" valign="center" transparent="1" foregroundColor="white" backgroundColor="dblau" />
+  <ePixmap position="76,5" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="center,0" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="center,662" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="0,54" size="1280,616" zPosition="-4" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="34,169" size="790,485" zPosition="3" backgroundColor="grey">
+  </eLabel>
+  <widget source="session.VideoPicture" render="Pig" position="863,143" size="380,215" backgroundColor="#ff000000" />
+  <widget name="poster" position="863,428" size="160,225" alphatest="blend" zPosition="5" />
+  <eLabel position="34,143" size="790,2" zPosition="9" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="36,172" size="786,480" zPosition="4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="E n h a n c e d  M o v i e  C e n t e r" shadowColor="black" shadowOffset="3,2" position="141,10" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <widget name="menulist" FrontColorSel="#000000" BackColorSel="#ffffff" position="44,187" selectionPixmap="TechniHD/menu/sel1280x30.png" itemHeight="30" alphatest="blend" size="771,451" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="hblau" scrollbarMode="showOnDemand">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="727,678" size="60,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="309,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="514,678" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="ButtonRedText" position="135,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <widget name="ButtonGreenText" position="342,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="Manage Cover" position="546,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="Setup" position="793,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="Single search" position="1011,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+</screen>
   <screen name="MovieInfoSetup" position="0,0" size="1280,720" title="Movie Information Download Setup" flags="wfNoBorder" backgroundColor="transparent">
   <ePixmap position="76,5" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
   </ePixmap>
@@ -385,7 +515,7 @@
   <widget name="key_blue" position="756,679" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
   </widget>
   </screen>
-  <!--EMC End -->
+  <!--EMC End-->
   <screen name="EcmInfoScreen" position="80,43" size="331,44" flags="wfNoBorder" zPosition="1" backgroundColor="grey">
     <eLabel position="1,1" size="330,42" zPosition="2" backgroundColor="dblau" />
     <widget name="irdeto" position="7,3" size="18,19" font="hd;16" text="I" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="white" />
