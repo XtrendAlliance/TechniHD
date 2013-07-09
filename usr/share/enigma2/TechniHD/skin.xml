@@ -249,9 +249,9 @@
   <widget backgroundColor="un9b9ca1" source="session.CurrentService" render="Progress" position="350,575" size="568,9" zPosition="4" pixmap="TechniHD/p_bar.png">
     <convert type="ServicePosition">Length</convert>
   </widget>
-  <!--widget source="Service" render="EMCPositionGauge" position="350,575" size="568,14" zPosition="5" transparent="1">
+  <widget source="Service" render="EMCPositionGauge" position="350,575" size="568,9" zPosition="5" transparent="1">
     <convert type="EMCServicePosition">Gauge</convert>
-  </widget-->
+  </widget>
   <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_dolby_on.png" position="1030,607" size="44,28" zPosition="3" alphatest="blend">
     <convert type="ServiceInfo">IsMultichannel</convert>
     <convert type="ConditionalShowHide">
