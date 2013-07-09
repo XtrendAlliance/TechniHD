@@ -199,6 +199,108 @@
     </color>
   </windowstyle>
   <!--EMC Start-->
+  <screen name="EMCMediaCenter" position="center,center" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <ePixmap position="189,629" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <eLabel text="EMC" shadowColor="black" shadowOffset="2,1" position="130,633" zPosition="5" size="68,24" font="hdi; 25" backgroundColor="background" transparent="1" halign="center" />
+  <widget name="Cover" position="43,408" size="120,150" zPosition="8" alphatest="on" />
+  <ePixmap position="0,600" zPosition="-1" size="1280,84" pixmap="TechniHD/infobar_default.png">
+  </ePixmap>
+  <widget name="audioLabel" position="627,610" size="100,22" font="Regular; 17" backgroundColor="hblau" zPosition="3" transparent="1" />
+  <widget name="subtitleLabel" position="741,610" size="100,22" font="Regular; 17" backgroundColor="hblau" zPosition="3" transparent="1" />
+  <widget name="chapterLabel" position="255,608" size="338,25" font="hd; 20" halign="left" backgroundColor="hblau" transparent="1">
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1115,52" zPosition="3" size="70,25" font="Regular2;20" valign="top" halign="center" backgroundColor="dblau" alphatest="blend" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel position="1114,44" size="73,42" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="1113,43" size="75,44" zPosition="1" backgroundColor="grey">
+  </eLabel>
+  <widget source="session.CurrentService" render="Label" position="255,642" size="957,37" font="Regular; 30" valign="center" backgroundColor="background" transparent="1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <eLabel position="center,558" size="1280,42" zPosition="-1" backgroundColor="ddblau">
+  </eLabel>
+  <widget source="session.CurrentService" render="Label" backgroundColor="ddblau" position="249,565" size="96,27" font="Regular;22" halign="right">
+    <convert type="ServicePosition">Position,ShowHours</convert>
+  </widget>
+  <eLabel text="  (          )" position="1099,563" size="124,31" font="Regular2;21" halign="right" backgroundColor="ddblau" transparent="1" zPosition="7">
+  </eLabel>
+  <widget source="session.CurrentService" render="Label" backgroundColor="ddblau" position="1015,565" size="99,27" font="Regular2;19" halign="right">
+  <convert type="ServicePosition">Remaining,Negate</convert>
+  </widget>
+  <eLabel position="1120,565" size="30,32" zPosition="6" backgroundColor="ddblau">
+  </eLabel>
+  <widget source="session.CurrentService" render="Label" zPosition="5" backgroundColor="ddblau" transparent="1" position="1115,565" size="92,27" font="Regular; 22" halign="right" text="- 13.00" valign="center">
+    <convert type="THDServiceEndTime">EndTime</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" backgroundColor="ddblau" position="926,565" size="99,27" font="Regular;22" halign="left">
+    <convert type="ServicePosition">Length,ShowHours</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular; 17" position="1110,610" size="55,21" halign="right" backgroundColor="hblau" transparent="1" foregroundColor="white">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" font="Regular; 15" position="1167,611" size="10,18" halign="center" backgroundColor="hblau" transparent="1" foregroundColor="white">
+  </eLabel>
+  <widget source="session.CurrentService" render="Label" font="Regular; 17" position="1179,610" size="55,21" halign="left" backgroundColor="hblau" transparent="1" foregroundColor="white">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget backgroundColor="un9b9ca1" source="session.CurrentService" render="Progress" position="350,575" size="568,9" zPosition="4" pixmap="TechniHD/p_bar.png">
+    <convert type="ServicePosition">Length</convert>
+  </widget>
+  <!--widget source="Service" render="EMCPositionGauge" position="350,575" size="568,14" zPosition="5" transparent="1">
+    <convert type="EMCServicePosition">Gauge</convert>
+  </widget-->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_dolby_on.png" position="1030,607" size="44,28" zPosition="3" alphatest="blend">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_mehrkanal_on.png" position="942,607" size="44,28" zPosition="3" alphatest="blend">
+    <convert type="AudioInfo">AudioLanguage</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_format_on.png" position="1074,607" size="44,28" zPosition="3" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="1078,611" size="36,20" zPosition="4" font="Regular;2" valign="top" halign="center" foregroundColor="#416d9e" backgroundColor="#416d9e" transparent="0">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">1280,1920</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_hd_on.png" position="1074,607" size="44,28" zPosition="5" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">1280,1920</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_crypt_on.png" position="986,607" size="44,28" zPosition="3" alphatest="blend">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_subtitlesavailable_on.png" position="898,607" size="44,28" zPosition="3" alphatest="blend">
+    <convert type="AudioInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_hoerfilm_on.png" position="854,607" size="44,28" zPosition="3" alphatest="blend">
+    <convert type="AudioInfo">AudioDescription</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <ePixmap pixmap="TechniHD/ico_hoerfilm_off.png" position="854,607" size="44,28" zPosition="2" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/ico_subtitlesavailable_off.png" position="898,607" size="44,28" zPosition="2" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/ico_mehrkanal_off.png" position="942,607" size="44,28" zPosition="2" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/ico_dolby_off.png" position="1030,607" size="44,28" zPosition="2" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/ico_format_off.png" position="1074,607" size="44,28" zPosition="2" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/ico_crypt_off.png" position="986,607" size="44,28" zPosition="2" alphatest="blend" />
+  </screen>
   <screen name="EnhancedMovieCenterMenu" position="0,0" size="1280,720" title="EnhancedMovieCenterMenu" flags="wfNoBorder" backgroundColor="transparent">
   <ePixmap position="76,5" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
   </ePixmap>
@@ -2696,15 +2798,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ConditionalShowHide">
       </convert>
     </widget>
-    <widget source="session.CurrentService" render="FixedLabel" position="1078,611" size="35,20" zPosition="4" font="Regular;2" valign="top" halign="center" foregroundColor="un436ea0" backgroundColor="un436ea0" transparent="0">
+    <widget source="session.CurrentService" render="FixedLabel" position="1078,611" size="35,20" zPosition="4" font="Regular;2" valign="top" halign="center" foregroundColor="#416d9e" backgroundColor="#416d9e" transparent="0">
       <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">1280,1980</convert>
+      <convert type="ValueRange">1280,1920</convert>
       <convert type="ConditionalShowHide">
       </convert>
     </widget>
     <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_hd_on.png" position="1074,607" size="44,28" zPosition="5" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">1280,1980</convert>
+      <convert type="ValueRange">1280,1920</convert>
       <convert type="ConditionalShowHide">
       </convert>
     </widget>
