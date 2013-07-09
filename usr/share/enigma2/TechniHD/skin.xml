@@ -811,7 +811,7 @@
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="643,440" size="85,25" borderWidth="1" borderColor="black" backgroundColor="dblau" transparent="1" halign="right" font="Regular2; 20">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert type="FrontendInfo">SNRdB</convert>
     </widget>
     <eLabel name="agc" position="864,439" size="63,26" backgroundColor="dblau" foregroundColor="yellow" borderWidth="1" borderColor="black" halign="left" transparent="0" text="AGC:" font="Regular2; 20" />
     <widget source="session.FrontendStatus" render="Label" position="928,439" size="85,26" borderWidth="1" borderColor="black" backgroundColor="dblau" transparent="1" halign="center" font="Regular2; 20">
