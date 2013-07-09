@@ -807,7 +807,7 @@
       <convert type="THDpliExpertInfo">CryptoInfo</convert>
     </widget>
     <eLabel name="snr" position="255,441" size="60,25" backgroundColor="dblau" foregroundColor="yellow" borderWidth="1" borderColor="black" halign="left" transparent="0" text="SNR:" font="Regular2; 20" />
-    <widget source="session.FrontendStatus" render="Progress" pixmap="TechniHD/menu/longbar_snr.png" backgroundColor="dblau" zPosition="4" position="312,443" size="340,24" transparent="1">
+    <widget source="session.FrontendStatus" render="Progress" pixmap="TechniHD/menu/longbar_snr.png" backgroundColor="dblau" zPosition="4" position="312,443" size="330,24" transparent="1">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="643,440" size="85,25" borderWidth="1" borderColor="black" backgroundColor="dblau" transparent="1" halign="right" font="Regular2; 20">
@@ -821,7 +821,7 @@
     <widget source="session.FrontendStatus" render="Label" position="794,439" size="65,27" borderWidth="1" borderColor="black" backgroundColor="dblau" transparent="1" halign="center" font="Regular2; 20">
       <convert type="FrontendInfo">BER</convert>
     </widget>
-    <ePixmap pixmap="TechniHD/menu/longbar_snr0.png" backgroundColor="dblau" alphatest="blend" position="312,443" size="340,24" zPosition="3" />
+    <ePixmap pixmap="TechniHD/menu/longbar_snr0.png" backgroundColor="dblau" alphatest="blend" position="312,443" size="330,24" zPosition="3" />
     <ePixmap position="0,600" zPosition="-1" size="1280,84" pixmap="TechniHD/infobar_default.png">
     </ePixmap>
     <widget source="session.RecordState" render="FixedLabel" text="REC" position="1049,46" zPosition="3" size="52,42" font="Regular; 15" valign="top" halign="center" foregroundColor="white" backgroundColor="dblau" transparent="1">
