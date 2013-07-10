@@ -797,7 +797,7 @@
   <screen name="SecondInfoBar" title="Second InfoBar" position="0,0" zPosition="11" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel position="0,0" size="1280,720" backgroundColor="transparent" zPosition="-50" />
     <widget source="session.CurrentService" render="Label" position="255,470" size="840,25" transparent="1" zPosition="1" foregroundColor="foreground" backgroundColor="dblau" font="Regular2; 20" valign="top" halign="left">
-      <convert type="THDpliExpertInfo">ServiceInfo</convert>
+      <convert type="PliExtraInfo">ServiceInfo</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="255,528" size="840,58" transparent="1" zPosition="2" foregroundColor="foreground" backgroundColor="dblau" font="Regular2; 20" valign="top" halign="left">
       <convert type="THDpCaidDisplay">
