@@ -198,6 +198,81 @@
     <color name="WindowTitleBackground" color="backtop">
     </color>
   </windowstyle>
+  <screen name="mediaInfoSetup" position="0,0" size="1280,720" title="MediaInfo Setup" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="0,48" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="62,216" size="1156,383" zPosition="3" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="64,218" size="1152,379" zPosition="4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="MediaInfo Setup" shadowColor="black" shadowOffset="3,2" zPosition="4" position="141,60" size="280,31" font="Regular; 27" backgroundColor="dblau" transparent="1">
+  </eLabel>
+  <widget name="config" position="73,234" selectionPixmap="TechniHD/menu/sel1280x40.png" itemHeight="40" font="Regular3;28" alphatest="blend" size="1133,354" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="dblau" scrollbarMode="showOnDemand">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="309,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <eLabel text="Cancel" position="135,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="Save" position="342,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  </screen>
+  <screen name="mediaInfo" position="0,0" size="1280,720" title="MediaInfo" flags="wfNoBorder" backgroundColor="transparent">
+  <widget name="pname" shadowColor="black" shadowOffset="3,2" position="62,120" zPosition="5" size="1152,40" font="Regular; 20" backgroundColor="background" transparent="1" />
+  <widget name="pinfo" shadowColor="black" shadowOffset="3,2" position="62,167" zPosition="5" size="1152,40" font="Regular2; 20" backgroundColor="background" transparent="1" />
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="0,48" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="62,159" size="1156,2" zPosition="6" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="62,216" size="1156,383" zPosition="3" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="64,218" size="1152,379" zPosition="4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <widget name="head" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <widget name="dllist" position="73,234" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/sel.png" itemHeight="40" font="Regular3;23" alphatest="blend" size="1133,354" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="dblau" scrollbarMode="showOnDemand">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="309,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="514,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="786,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <eLabel text="Delete" position="135,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="AddDownload" position="342,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="Start/Stop Download" position="546,636" size="236,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <eLabel text="Settings" position="819,636" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+</screen>
   <!--EMC Start-->
   <screen name="EMCMediaCenter" position="center,center" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
   <ePixmap position="189,629" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
@@ -3689,28 +3764,42 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Exit" position="165,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
     </eLabel>
   </screen>
-  <screen name="SatNimSelection" position="0,0" size="1280,720" title="select Slot" flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="TechniHD/menu/back-main.png" transparent="1">
-    </ePixmap>
-    <widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
-      <convert type="ClockToText">Date</convert>
-    </widget>
-    <eLabel text="Satfinder" position="80,40" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1">
-    </eLabel>
-    <eLabel text="select Slot" position="480,110" size="730,30" font="Regular;24" backgroundColor="backtop" transparent="1">
-    </eLabel>
-    <eLabel position="480,146" size="730,470" zPosition="1" backgroundColor="grey">
-    </eLabel>
-    <eLabel position="482,148" size="726,466" zPosition="2" backgroundColor="background">
-    </eLabel>
-    <widget name="nimlist" position="490,156" size="710,450" zPosition="3" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand">
-    </widget>
-    <ePixmap position="80,490" size="200,110" zPosition="2" pixmap="TechniHD/icons/tuner.png" transparent="1" alphatest="blend">
-    </ePixmap>
-  </screen>
+  <screen name="SatNimSelection" position="0,0" size="1280,720" title="select Slot" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel text="select Slot" position="479,113" size="730,27" zPosition="10" font="Regular;24" halign="center" backgroundColor="hhblau" transparent="0" />
+  <widget name="nimlist" zPosition="7" position="490,156" size="710,423" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+  </widget>
+  <eLabel position="480,146" size="730,451" zPosition="5" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="482,148" size="726,447" zPosition="6" backgroundColor="dblau">
+  </eLabel>
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/tv-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="Satfinder" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <ePixmap pixmap="TechniHD/icons/scan-s.png" position="70,220" size="250,250" zPosition="5" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/exit.png" zPosition="4" position="97,634" size="80,40" alphatest="blend">
+  </ePixmap>
+  <eLabel text="Exit" position="165,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </eLabel>
+</screen>
   <screen name="ScanSetup" position="0,0" size="1280,720" title="Manual Scan" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="introduction" position="479,113" size="730,27" zPosition="10" font="Regular;24" halign="center" backgroundColor="hhblau" transparent="0">
     </widget>
