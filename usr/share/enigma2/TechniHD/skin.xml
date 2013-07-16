@@ -870,9 +870,6 @@
     </ePixmap>
   </screen>
   <screen name="SecondInfoBar" title="Second InfoBar" position="0,0" zPosition="11" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <!--widget source="session.Event_Now" render="FixedLabel" size="159,12" font="Regular3; 12" position="85,378" foregroundColor="white" backgroundColor="dblau" transparent="1" zPosition="5" text="NEXT" halign="center">
-    <convert type="THDEventProgress">Background</convert>
-    </widget-->
     <ePixmap position="0,600" zPosition="-1" size="1280,84" pixmap="TechniHD/infobar_default.png">
     </ePixmap>
     <widget source="session.Event_Now" render="Progress" position="0,90" size="1280,516" foregroundColor="dblau" backgroundColor="dblau" transparent="1" zPosition="-1">
@@ -882,7 +879,7 @@
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="253,100" size="833,35" font="Regular2; 28" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
-      <convert type="EventName">Name</convert>
+      <convert type="EventName">NameNow</convert>
     </widget>
     <widget source="session.Event_Now" font="Regular2; 20" position="255,140" render="Label" size="834,25" transparent="1" foregroundColor="white" zPosition="8" backgroundColor="dblau" halign="left">
       <convert type="EventDescription">Description</convert>
@@ -965,7 +962,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="253,350" size="833,35" font="Regular2; 28" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
-      <convert type="EventName">Name</convert>
+      <convert type="EventName">NameNext</convert>
     </widget>
     <widget source="session.Event_Now" render="Progress" position="90,130" size="150,7" pixmap="TechniHD/progressbar.png" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
