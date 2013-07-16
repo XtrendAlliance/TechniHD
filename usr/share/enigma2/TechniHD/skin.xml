@@ -870,6 +870,189 @@
     </ePixmap>
   </screen>
   <screen name="SecondInfoBar" title="Second InfoBar" position="0,0" zPosition="11" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+    <!--widget source="session.Event_Now" render="FixedLabel" size="159,12" font="Regular3; 12" position="85,378" foregroundColor="white" backgroundColor="dblau" transparent="1" zPosition="5" text="NEXT" halign="center">
+    <convert type="THDEventProgress">Background</convert>
+    </widget-->
+    <ePixmap position="0,600" zPosition="-1" size="1280,84" pixmap="TechniHD/infobar_default.png">
+    </ePixmap>
+    <widget source="session.Event_Now" render="Progress" position="0,90" size="1280,516" foregroundColor="dblau" backgroundColor="dblau" transparent="1" zPosition="-1">
+    <convert type="THDEventProgress">Background</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="255,430" size="840,156" transparent="1" zPosition="2" foregroundColor="white" backgroundColor="dblau" font="Regular3; 18" valign="top" halign="left">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="253,100" size="833,35" font="Regular2; 28" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" font="Regular2; 20" position="255,140" render="Label" size="834,25" transparent="1" foregroundColor="white" zPosition="8" backgroundColor="dblau" halign="left">
+      <convert type="EventDescription">Description</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="254,180" size="840,156" transparent="1" zPosition="2" foregroundColor="white" backgroundColor="dblau" font="Regular3; 18" valign="top" halign="left">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="1098,362" size="100,20" font="Regular;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <widget source="session.RecordState" render="FixedLabel" text="REC" position="1049,46" zPosition="3" size="52,42" font="Regular; 15" valign="top" halign="center" foregroundColor="white" backgroundColor="dblau" transparent="1">
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.RecordState" render="FixedLabel" position="1069,67" zPosition="4" size="12,12" font="Regular;2" valign="top" halign="center" foregroundColor="#ff0000" backgroundColor="#ff0000" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <widget source="session.RecordState" render="FixedLabel" position="1049,44" zPosition="2" size="52,42" font="Regular;16" valign="top" halign="center" foregroundColor="dblau" backgroundColor="dblau" transparent="0">
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.RecordState" render="FixedLabel" position="1048,43" zPosition="1" size="54,44" font="Regular;16" valign="top" halign="center" foregroundColor="grey" backgroundColor="grey" transparent="0">
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/buttons/green.png" position="1041,606" zPosition="5" size="40,40" backgroundColor="hblau" alphatest="blend" transparent="1">
+      <convert type="ServiceInfo">SubservicesAvailable</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="FixedLabel" text="Subservices" position="1071,611" zPosition="1" size="120,21" font="hd; 18" valign="top" halign="center" backgroundColor="hblau" transparent="1">
+      <convert type="ServiceInfo">SubservicesAvailable</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/buttons/red.png" position="1061,606" zPosition="5" size="40,40" backgroundColor="hblau" alphatest="blend" transparent="1">
+      <convert type="ServiceInfo">HasHBBTV</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="FixedLabel" text="HbbTV" position="1071,611" zPosition="1" size="120,21" font="hd; 18" valign="top" halign="center" backgroundColor="hblau" transparent="1">
+      <convert type="ServiceInfo">HasHBBTV</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.Event_Next" font="Regular2; 20" position="255,389" render="Label" size="834,25" transparent="1" foregroundColor="white" zPosition="8" backgroundColor="dblau" halign="left">
+      <convert type="EventDescription">Description</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1115,52" zPosition="3" size="70,25" font="Regular2;20" valign="top" halign="center" backgroundColor="dblau" alphatest="blend" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel position="1114,44" size="73,42" zPosition="2" backgroundColor="dblau">
+    </eLabel>
+    <eLabel position="1113,43" size="75,44" zPosition="1" backgroundColor="grey">
+    </eLabel>
+    <widget source="session.CurrentService" render="Label" position="255,642" size="575,37" font="Regular; 30" valign="center" backgroundColor="background" transparent="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="session.CurrentService" render="ChannelNumber" position="72,618" size="169,61" font="Regular; 60" halign="right" valign="top" zPosition="8" backgroundColor="hblau" transparent="1">
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="85,102" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="154,102" size="90,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="85,353" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="154,353" size="90,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="1098,112" size="100,20" font="Regular;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="253,350" size="833,35" font="Regular2; 28" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" position="90,130" size="150,7" pixmap="TechniHD/progressbar.png" transparent="1" zPosition="3">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" position="90,130" size="150,7" backgroundColor="un9b9ca1" foregroundColor="un9b9ca1" transparent="1" zPosition="2">
+    <convert type="THDEventProgress">Background</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_dolby_on.png" position="1053,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="ServiceInfo">IsMultichannel</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="TechniHD/ico_tuner_a_on.png" position="921,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="TechniHD/ico_tuner_b_on.png" position="921,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_format_on.png" position="1097,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="ServiceInfo">IsWidescreen</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_txt_on.png" position="1009,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="ServiceInfo">HasTelext</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="FixedLabel" position="1101,655" size="36,18" zPosition="4" font="Regular;2" valign="top" halign="center" foregroundColor="#1e2e44" backgroundColor="#1e2e44" transparent="0">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">1280,1920</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_hd_on.png" position="1097,650" size="44,28" zPosition="5" alphatest="blend">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">1280,1920</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_crypt_on.png" position="965,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="ServiceInfo">IsCrypted</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_hbbtv_on.png" position="1141,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="ServiceInfo">HasHBBTV</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_subtitlesavailable_on.png" position="877,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="AudioInfo">SubtitlesAvailable</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_hoerfilm_on.png" position="833,650" size="44,28" zPosition="5" alphatest="blend">
+      <convert type="AudioInfo">AudioDescription</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="FixedLabel" position="837,652" size="38,21" zPosition="4" font="Regular;2" valign="top" halign="center" backgroundColor="#1e2e44" transparent="0" foregroundColor="#1e2e44">
+      <convert type="AudioInfo">AudioDescription</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="TechniHD/ico_mehrkanal_on.png" position="833,650" size="44,28" zPosition="3" alphatest="blend">
+      <convert type="AudioInfo">AudioLanguage</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
+    <ePixmap pixmap="TechniHD/ico_mehrkanal_off.png" position="833,650" size="44,28" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="TechniHD/ico_tuner_off.png" position="921,650" size="44,28" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="TechniHD/ico_crypt_off.png" position="965,650" size="44,28" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="TechniHD/ico_subtitlesavailable_off.png" position="877,650" size="44,28" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="TechniHD/ico_dolby_off.png" position="1053,650" size="44,28" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="TechniHD/ico_format_off.png" position="1097,650" size="44,28" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="TechniHD/ico_txt_off.png" position="1009,650" size="44,28" zPosition="2" alphatest="blend" />
+    <ePixmap pixmap="TechniHD/ico_hbbtv_off.png" position="1141,650" size="44,28" zPosition="2" alphatest="blend" />
+    <widget source="session.CurrentService" render="Label" position="255,608" size="760,27" font="hd;22" halign="left" backgroundColor="hblau" transparent="1">
+      <convert type="BouquetInfo">Bouquet</convert>
+    </widget>
+  </screen>
+  <!--screen name="SecondInfoBar" title="Second InfoBar" position="0,0" zPosition="11" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="session.Event_Now" render="Progress" position="center,328" size="1280,103" foregroundColor="dblau" backgroundColor="dblau" transparent="1" zPosition="-1">
     <convert type="THDEventProgress">Background</convert>
     </widget>
@@ -1053,7 +1236,7 @@
     <widget source="session.CurrentService" render="Label" position="255,608" size="760,27" font="hd;22" halign="left" backgroundColor="hblau" transparent="1">
       <convert type="BouquetInfo">Bouquet</convert>
     </widget>
-  </screen>
+  </screen-->
   <screen name="BookmarkMenuSelect" position="0,0" size="1280,720" title="Bookmarks" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel text="Webbrowser" zPosition="4" position="141,60" size="280,31" font="Regular; 27" backgroundColor="dblau" transparent="1">
     </eLabel>
