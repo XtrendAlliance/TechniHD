@@ -1049,7 +1049,8 @@
       <convert type="BouquetInfo">Bouquet</convert>
     </widget>
   </screen>
-  <!--screen name="SecondInfoBar" title="Second InfoBar" position="0,0" zPosition="11" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+   <!--Do not change this first line from here-->
+   <screen name="SecondInfoBarDisabled" title="Second InfoBar Normal" position="0,0" zPosition="11" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="session.Event_Now" render="Progress" position="center,328" size="1280,103" foregroundColor="dblau" backgroundColor="dblau" transparent="1" zPosition="-1">
     <convert type="THDEventProgress">Background</convert>
     </widget>
@@ -1233,7 +1234,7 @@
     <widget source="session.CurrentService" render="Label" position="255,608" size="760,27" font="hd;22" halign="left" backgroundColor="hblau" transparent="1">
       <convert type="BouquetInfo">Bouquet</convert>
     </widget>
-  </screen-->
+  </screen>
   <screen name="BookmarkMenuSelect" position="0,0" size="1280,720" title="Bookmarks" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel text="Webbrowser" zPosition="4" position="141,60" size="280,31" font="Regular; 27" backgroundColor="dblau" transparent="1">
     </eLabel>
