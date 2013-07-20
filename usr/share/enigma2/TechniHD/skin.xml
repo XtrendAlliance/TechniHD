@@ -1471,6 +1471,11 @@
       <convert type="ConditionalShowHide">
       </convert>
     </widget>
+    <widget source="menu" render="Pixmap" pixmap="TechniHD/icons/setup.png" position="70,220" size="250,250" zPosition="5" alphatest="blend">
+      <convert type="MenuEntryCompare">TechniHDSetup</convert>
+      <convert type="ConditionalShowHide">
+      </convert>
+    </widget>
     <widget source="menu" render="Pixmap" pixmap="TechniHD/icons/rc.png" position="70,220" size="250,250" zPosition="5" alphatest="blend">
       <convert type="MenuEntryCompare">multi_quick</convert>
       <convert type="ConditionalShowHide">
