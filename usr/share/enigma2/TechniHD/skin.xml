@@ -1301,20 +1301,8 @@
   </eLabel>
   <eLabel position="1113,43" size="75,44" zPosition="21" backgroundColor="grey">
   </eLabel>
-  <widget source="session.CurrentService" render="Label" position="255,642" size="572,37" font="Regular; 30" valign="center" backgroundColor="background" transparent="1" zPosition="1">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <widget source="session.Event_Next" render="Label" position="241,607" size="91,25" font="Regular2; 20" halign="center" backgroundColor="hblau" transparent="1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-  <widget source="session.Event_Next" render="Label" position="319,607" size="86,25" font="Regular2; 20" halign="center" backgroundColor="hblau" transparent="1">
-    <convert type="EventTime">EndTime</convert>
-    <convert type="ClockToText">Format:- %H:%M</convert>
-    </widget>
-  <widget source="session.Event_Next" render="Label" position="414,608" size="600,25" font="hd;22" halign="left" backgroundColor="hblau" transparent="1">
-    <convert type="EventName">Name</convert>
-  </widget>
+  <!-- ChannelNameInformation!! do not change this line --><widget source="session.CurrentService" render="Label" position="255,642" size="572,37" font="Regular; 30" valign="center" backgroundColor="background" transparent="1" zPosition="1"><convert type="ServiceName">Name</convert></widget>
+  <!-- EventNextInformation!! do not change this line --><widget source="session.Event_Next" render="Label" position="241,607" size="91,25" font="Regular2; 20" halign="center" backgroundColor="hblau" transparent="1"><convert type="EventTime">StartTime</convert><convert type="ClockToText">Format:%H:%M</convert></widget><widget source="session.Event_Next" render="Label" position="319,607" size="86,25" font="Regular2; 20" halign="center" backgroundColor="hblau" transparent="1"><convert type="EventTime">EndTime</convert><convert type="ClockToText">Format:- %H:%M</convert></widget><widget source="session.Event_Next" render="Label" position="414,608" size="600,25" font="hd;22" halign="left" backgroundColor="hblau" transparent="1"><convert type="EventName">Name</convert></widget>
   <widget source="session.CurrentService" render="ChannelNumber" position="72,618" size="169,61" zPosition="8" font="Regular; 60" halign="right" valign="top" backgroundColor="hblau" transparent="1">
   </widget>
   <widget source="session.Event_Now" render="Progress" position="0,502" size="1280,98" foregroundColor="dblau" backgroundColor="dblau" transparent="1" zPosition="-1">
