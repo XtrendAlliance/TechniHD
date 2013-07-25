@@ -1063,7 +1063,7 @@
       </convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="255,470" size="771,25" transparent="1" zPosition="3" backgroundColor="dblau" font="Regular2; 20" valign="top" halign="left" noWrap="1" foregroundColor="foreground">
-      <convert type="THDpliExpertInfo">CryptoInfo</convert>
+      <convert type="PliExtraInfo">CryptoInfo</convert>
     </widget>
     <eLabel name="snr" position="255,441" size="60,25" backgroundColor="dblau" foregroundColor="yellow" borderWidth="1" borderColor="black" halign="left" transparent="0" text="SNR:" font="Regular2; 20" />
     <widget source="session.FrontendStatus" render="Progress" pixmap="TechniHD/menu/longbar_snr.png" backgroundColor="dblau" zPosition="4" position="312,443" size="330,24" transparent="1">
