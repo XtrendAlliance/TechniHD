@@ -12,7 +12,7 @@ from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 from Components.ActionMap import ActionMap
 from Components.Pixmap import Pixmap
-from Components.config import config, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigInteger, ConfigYesNo
+from Components.config import *
 from Components.ConfigList import ConfigListScreen
 from Tools.Directories import fileExists
 from skin import parseColor
@@ -115,12 +115,15 @@ def main(session, **kwargs):
 	session.open(TechniHDSetup)
 	
 def setup(menuid):
-    if menuid == 'mainmenu':
-        return [(_('TechniHD') + " " + _('Setup'),
-          main,
-          'TechniHDSetup',
-          45)]
-    return []
+    if config.skin.primary_skin.value == 'TechniHD/skin.xml': 
+        if menuid == 'mainmenu':
+            return [(_('TechniHD') + " " + _('Setup'),
+              main,
+              'TechniHDSetup',
+              45)]
+        return []
+    else:
+        return []
 
 def Plugins(**kwargs):
 	return PluginDescriptor(name="TechniHDSetup", description=_("Setup for TechniHD-skin"), where = PluginDescriptor.WHERE_MENU, fnc=setup)
