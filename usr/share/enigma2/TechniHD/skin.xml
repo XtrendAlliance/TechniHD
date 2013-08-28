@@ -6293,7 +6293,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </eLabel>
   <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
   </eLabel>
-  <widget name="config" zPosition="5" alphatest="blend" position="415,130" size="800,358" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1" />
+  <widget name="config" font="Regular;25" itemHeight="40" zPosition="5" alphatest="blend" position="415,130" size="800,358" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1" />
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/XTPanel/pictures/swapfile.png" transparent="1" zPosition="4" position="76,51" size="48,48" alphatest="blend" />
   <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
   </ePixmap>
