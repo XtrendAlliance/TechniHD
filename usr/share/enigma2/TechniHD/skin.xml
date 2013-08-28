@@ -6252,8 +6252,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
   </eLabel>
   <widget name="menu" zPosition="5" alphatest="blend" position="415,130" size="800,450" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1" />
-  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/tv-logo.png" transparent="1" alphatest="blend">
-  </ePixmap>
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/XTPanel/pictures/services.png" transparent="1" zPosition="4" position="76,51" size="48,48" alphatest="blend" />
   <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
   </ePixmap>
   <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
@@ -6288,5 +6287,41 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </widget>
   <widget name="key_blue" position="861,637" size="230,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
   </widget>
-</screen>
+  </screen>
+  <screen name="Swap" position="0,0" size="1280,720" title="Swap" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel text="P a n e l" shadowColor="black" shadowOffset="2,1" position="87,374" size="216,45" zPosition="6" font="Regular3; 45" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+  </eLabel>
+  <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+  </eLabel>
+  <widget name="config" zPosition="5" alphatest="blend" position="415,130" size="800,358" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/XTPanel/pictures/swapfile.png" transparent="1" zPosition="4" position="76,51" size="48,48" alphatest="blend" />
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,100" size="1280,522" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <widget source="Title" render="Label" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="344,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_blue" position="378,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+  </widget>
+  <widget name="status" position="414,530" size="801,53" zPosition="4" font="Regular; 25" valign="center" halign="center" backgroundColor="dblau2" transparent="0">
+  </widget>
+  </screen>
 </skin>
