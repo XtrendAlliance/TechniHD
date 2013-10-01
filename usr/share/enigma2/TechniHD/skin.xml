@@ -885,7 +885,7 @@
     <widget source="session.Event_Now" render="Progress" position="0,90" size="1280,516" foregroundColor="dblau" backgroundColor="dblau" transparent="1" zPosition="-1">
     <convert type="THDEventProgress">Background</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" position="255,430" size="840,156" transparent="1" zPosition="2" foregroundColor="white" backgroundColor="dblau" font="Regular3; 18" valign="top" halign="left">
+    <widget source="session.Event_Next" render="Label" position="255,430" size="840,156" transparent="1" zPosition="2" foregroundColor="white" backgroundColor="dblau" font="Regular3;21" valign="top" halign="left">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="253,100" size="833,35" font="Regular2; 28" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
@@ -894,7 +894,7 @@
     <widget source="session.Event_Now" font="Regular2; 20" position="255,140" render="Label" size="834,25" transparent="1" foregroundColor="white" zPosition="8" backgroundColor="dblau" halign="left">
       <convert type="EventDescription">Description</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="254,180" size="840,156" transparent="1" zPosition="2" foregroundColor="white" backgroundColor="dblau" font="Regular3; 18" valign="top" halign="left">
+    <widget source="session.Event_Now" render="Label" position="254,180" size="840,156" transparent="1" zPosition="2" foregroundColor="white" backgroundColor="dblau" font="Regular3;21" valign="top" halign="left">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="1098,362" size="100,20" font="Regular;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
@@ -4685,13 +4685,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </ePixmap>
     <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="612,634" size="40,40" alphatest="blend">
     </ePixmap>
-    <widget source="key_red" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    <widget source="key_red" render="Label" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
     </widget>
-    <widget source="key_green" position="303,637" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    <widget source="key_green" render="Label" position="303,637" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
     </widget>
-    <widget source="key_yellow" position="479,637" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+    <widget source="key_yellow" render="Label" position="479,637" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
     </widget>
-    <widget source="key_blue" position="650,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+    <widget source="key_blue" render="Label" position="650,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
     </widget>
   </screen>
   <screen name="VideoFinetune" position="0,0" size="1280,720" backgroundColor="black" flags="wfNoBorder">
