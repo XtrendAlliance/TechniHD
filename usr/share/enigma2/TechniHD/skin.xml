@@ -6575,4 +6575,79 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </widget>
   <widget source="Title" render="Label" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
   </screen>
+  <screen name="Getipklist" position="0,0" size="1280,720" title="XTA Pluginmanager" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel text="P a n e l" shadowColor="black" shadowOffset="2,1" position="87,374" size="216,45" zPosition="6" font="Regular3; 45" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+  </eLabel>
+  <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+  </eLabel>
+  <widget name="list" itemHeight="40" font="Regular;25" zPosition="5" alphatest="blend" position="416,121" size="800,481" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="dblau" transparent="1" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/XTPanel/pictures/ipkgpicon.png" transparent="1" zPosition="4" position="76,51" size="48,48" alphatest="blend" />
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,100" size="1280,522" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <widget source="Title" render="Label" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <ePixmap position="998,629" size="25,25" pixmap="skin_default/buttons/button_red.png" zPosition="6" alphatest="blend" />
+  <eLabel text="Already Installed" zPosition="5" position="1021,621" size="247,26" font="hdi; 20" halign="left" backgroundColor="black" transparent="1" valign="center" />
+   <ePixmap position="998,655" size="25,25" pixmap="skin_default/buttons/button_green.png" zPosition="6" alphatest="blend" />
+  <eLabel text="Not Installed" zPosition="5" position="1021,651" size="247,23" font="hdi; 20" halign="left" backgroundColor="black" transparent="1" />
+</screen>
+<screen name="XTHdd" position="0,0" size="1280,720" title="Hard Disk Settings" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel text="P a n e l" shadowColor="black" shadowOffset="2,1" position="87,374" size="216,45" zPosition="6" font="Regular3; 45" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+  </eLabel>
+  <eLabel text="XTA" shadowColor="black" shadowOffset="3,2" position="89,286" size="216,109" zPosition="5" font="Regular2; 86" halign="left" backgroundColor="hblau" transparent="1" valign="center">
+  </eLabel>
+  <widget name="infotext" font="Regular;25" position="416,215" size="800,277" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/XTPanel/pictures/disks.png" transparent="1" zPosition="4" position="76,51" size="48,48" alphatest="blend" />
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,100" size="1280,522" zPosition="-2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="0,103" size="371,515" zPosition="3" backgroundColor="hblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <widget source="Title" render="Label" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="344,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="584,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="130,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_green" position="378,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+  </widget>
+  <widget name="key_yellow" position="616,637" size="198,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="lab1" zPosition="5" position="933,637" size="108,28" font="Regular; 20" halign="right" backgroundColor="black" transparent="1" />
+  <widget name="labrun" zPosition="5" position="1049,637" size="171,28" font="hdi; 20" halign="left" foregroundColor="green" backgroundColor="black" transparent="1" />
+  <widget name="labstop" zPosition="5" position="1049,637" size="171,28" font="hdi; 20" halign="left" foregroundColor="red" backgroundColor="black" transparent="1" />
+</screen>
 </skin>
