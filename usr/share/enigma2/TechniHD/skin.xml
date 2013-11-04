@@ -232,6 +232,8 @@
   <eLabel text="Save" position="342,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
   </screen>
   <screen name="mediaInfo" position="0,0" size="1280,720" title="MediaInfo" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel text="MediaInfo Downloads" shadowColor="black" shadowOffset="3,2" zPosition="4" position="141,60" size="280,31" font="Regular; 27" backgroundColor="dblau" transparent="1">
+  </eLabel>
   <widget name="pname" shadowColor="black" shadowOffset="3,2" position="62,120" zPosition="5" size="1152,40" font="Regular; 20" backgroundColor="background" transparent="1" />
   <widget name="pinfo" shadowColor="black" shadowOffset="3,2" position="62,167" zPosition="5" size="1152,40" font="Regular2; 20" backgroundColor="background" transparent="1" />
   <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/movie-logo.png" transparent="1" alphatest="blend">
@@ -244,9 +246,9 @@
   </eLabel>
   <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
   </eLabel>
-  <eLabel position="62,216" size="1156,383" zPosition="3" backgroundColor="grey">
+  <eLabel position="62,216" size="1156,329" zPosition="3" backgroundColor="grey">
   </eLabel>
-  <eLabel position="64,218" size="1152,379" zPosition="4" backgroundColor="dblau">
+  <eLabel position="64,218" size="1152,325" zPosition="4" backgroundColor="dblau">
   </eLabel>
   <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="ClockToText">Default</convert>
@@ -257,8 +259,8 @@
   <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="THDClockToText">Format:%d.%m.%Y</convert>
   </widget>
-  <widget name="head" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
-  <widget name="dllist" position="73,234" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/sel.png" itemHeight="40" font="Regular3;23" alphatest="blend" size="1133,354" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="dblau" scrollbarMode="showOnDemand">
+  <widget name="head" shadowColor="black" shadowOffset="3,2" position="center,561" zPosition="5" size="1158,40" font="Regular; 28" backgroundColor="background" transparent="1" halign="center" />
+  <widget name="dllist" position="73,234" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/sel.png" itemHeight="40" font="Regular3;23" alphatest="blend" size="1133,298" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="dblau" scrollbarMode="showOnDemand">
   </widget>
   <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
   </ePixmap>
