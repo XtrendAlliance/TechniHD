@@ -6734,6 +6734,44 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1031,634" size="32,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/plusminus.png" zPosition="4" position="56,634" size="80,40" alphatest="blend" />
 </screen>
+<screen name="cinetopiaLinksScreen" position="0,0" size="1280,720" title="cinetopia Links" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel position="236,214" size="608,33" zPosition="9" backgroundColor="dblau" />
+  <eLabel position="236,278" size="608,33" zPosition="9" backgroundColor="dblau" />
+  <eLabel position="801,211" size="64,101" zPosition="19" backgroundColor="dblau" />
+  <widget name="cover" position="989,328" size="200,263" zPosition="6" transparent="1" backgroundColor="dblau" alphatest="blend" />
+  <widget name="loading" position="239,215" size="798,87" zPosition="5" backgroundColor="dblau" transparent="1" foregroundColor="grey" />
+  <widget name="title" shadowColor="black" shadowOffset="3,2" position="62,120" zPosition="5" size="1150,40" font="Regular; 20" backgroundColor="background" transparent="1" halign="center" />
+  <widget name="subtitle" shadowColor="black" shadowOffset="3,2" position="62,167" zPosition="5" size="1150,40" font="Regular2; 20" backgroundColor="background" transparent="1" halign="center" />
+  <ePixmap position="76,57" zPosition="4" size="56,46" pixmap="TechniHD/menu/internet-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="0,48" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="62,159" size="1150,2" zPosition="6" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="0,102" size="1280,516" zPosition="2" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="62,318" size="1150,281" zPosition="3" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="64,319" size="1147,278" zPosition="4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="Download Center" shadowColor="black" shadowOffset="3,2" position="135,62" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <widget name="menulist" foregroundColorSelected="#000000" position="73,328" itemHeight="40" font="Regular3;23" alphatest="blend" size="876,268" zPosition="5" transparent="1" enableWrapAround="1" foregroundColor="white" backgroundColor="dblau" scrollbarMode="showOnDemand">
+ </widget>
+ <eLabel text="MediaInfo" position="1065,636" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1031,634" size="32,40" alphatest="blend" />
+</screen>
 <screen name="sjSectionScreen" position="0,0" size="1280,720" title="sjSection" flags="wfNoBorder" backgroundColor="transparent">
   <widget name="title" shadowColor="black" shadowOffset="3,2" position="62,120" zPosition="5" size="1150,40" font="Regular; 20" backgroundColor="background" transparent="1" halign="center" />
   <widget name="subtitle" shadowColor="black" shadowOffset="3,2" position="62,167" zPosition="5" size="1150,40" font="Regular2; 20" backgroundColor="background" transparent="1" halign="center" />
