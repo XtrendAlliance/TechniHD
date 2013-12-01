@@ -2147,7 +2147,10 @@
     <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
       <convert type="THDClockToText">Format:%d.%m.%Y</convert>
     </widget>
-    <widget source="Title" render="Label" zPosition="5" position="20,105" size="403,47" font="hd; 16" backgroundColor="ddblau" transparent="1" valign="center" halign="center">
+    <!--widget source="Title" render="Label" zPosition="5" position="20,105" size="403,47" font="hd; 16" backgroundColor="ddblau" transparent="1" valign="center" halign="center">
+    </widget-->
+    <widget source="session.CurrentService" render="Label" zPosition="5" position="20,105" size="403,47" font="hd; 16" backgroundColor="ddblau" transparent="1" valign="center" halign="center">
+    <convert type="BouquetInfo">Bouquet</convert>
     </widget>
     <eLabel position="20,105" size="403,47" zPosition="4" backgroundColor="ddblau">
     </eLabel>
