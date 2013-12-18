@@ -36,14 +36,6 @@ class THDPremiumInfo(Converter, object):
 				"HD1080p": (self.IS_1080P, (iPlayableService.evVideoSizeChanged,iPlayableService.evVideoProgressiveChanged,iPlayableService.evUpdatedInfo,)),
 			}[type]
 
-	def getServiceInfoString(self, info, what, convert = lambda x: "%d" % x):
-		v = info.getInfo(what)
-		if v == -1:
-			return "N/A"
-		if v == -2:
-			return info.getInfoString(what)
-		return convert(v)
-
 	@cached
 	def getBoolean(self):
 		service = self.source.service
@@ -55,26 +47,35 @@ class THDPremiumInfo(Converter, object):
 			audio = service.audioTracks()
                         if audio:
 				n = audio.getNumberOfTracks()
-				idx = 0
+                                idx = 0
 				while idx < n:
 					i = audio.getTrackInfo(idx)
-                                        languages = i.getLanguage()
+                                        languages = i.getLanguage().split('/')
                                         description = i.getDescription()
-					lang = language.getLanguage()
-                                        if lang == 'de_DE':
-                                                if "Englisch" in languages or "English" in languages or "Spanish" in languages or "Turkish" in languages or "Kommentar" in languages or "Stadion" in languages or "stereo englisch" in languages or "franz" in languages or "Franz\xc3\xb6sisch" in languages or "Italian" in languages or "Russian" in languages or "French" in languages or "Italienisch" in languages or "Tonopt. 2" in languages:
+					lange = language.getLanguage()
+                                        if lange == 'de_DE':
+                                                if "Englisch" in languages or "English" in languages or "Spanish" in languages or "Turkish" in languages or "Kommentar" in languages or "Stadion" in languages or "stereo englisch" in languages or "franz" in languages or "Franz\xc3\xb6sisch" in languages or "franz\xc3\xb6sisch" in languages or "Italian" in languages or "Russian" in languages or "French" in languages or "Italienisch" in languages or "Tonopt. 2" in languages:
 						        return True
-                                        elif lang == 'en_EN':
+                                                elif "DTS audio" in description or "AC-3 audio" in description:
+                                                        if n > 1:
+                                                                return True
+                                                        return False
+                                                idx += 1
+                                        elif lange == 'en_EN':
                                                 if "Deutsch" in languages or "German" in languages:
 						        return True
-					idx += 1
+                                                elif "DTS audio" in description or "AC-3 audio" in description:
+                                                        if n > 1:
+                                                                return True
+                                                        return False
+					        idx += 1
 			return False
 
 		elif self.type == self.SUBTITLES_AVAILABLE:
 			subtitle = service and service.subtitle()
 			subtitlelist = subtitle and subtitle.getSubtitleList()
 			if subtitlelist:
-				return len(subtitlelist) > 0
+			       	return len(subtitlelist) > 0
 			return False
 			
 		elif self.type == self.AUDIO_DESCRIPTION:
@@ -163,8 +164,3 @@ class THDPremiumInfo(Converter, object):
 	def changed(self, what):
 		if what[0] != self.CHANGED_SPECIFIC or what[1] in self.interesting_events:
 			Converter.changed(self, what)
-			
-#service = self.session.nav.getCurrentService()
-#info = service and service.info()
-#height = info and info.getInfo(iServiceInformation.sVideoHeight)
-#width = info and info.getInfo(iServiceInformation.sVideoWidth)

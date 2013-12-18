@@ -367,7 +367,12 @@
     <convert type="ConditionalShowHide">
     </convert>
   </widget>
-  <widget source="session.CurrentService" render="FixedLabel" text="B" position="1060,599" zPosition="2" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" position="1072,613" size="37,19" zPosition="3" font="Regular;2" valign="top" halign="right" backgroundColor="#436fa1" transparent="0" foregroundColor="#436fa1">
+  <convert type="THDPremiumInfo">IsWidescreen</convert>
+  <convert type="ConditionalShowHide">
+  </convert>
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="B" position="1060,599" zPosition="3" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
     <convert type="THDPremiumInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">
     </convert>
@@ -1028,7 +1033,12 @@
     <convert type="ConditionalShowHide">
     </convert>
   </widget>
-  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="2" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" position="963,654" size="37,19" zPosition="3" font="Regular;2" valign="top" halign="right" backgroundColor="#1e2e44" transparent="0" foregroundColor="#1e2e44">
+  <convert type="THDPremiumInfo">IsWidescreen</convert>
+  <convert type="ConditionalShowHide">
+  </convert>
+</widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="3" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
     <convert type="THDPremiumInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">
     </convert>
@@ -1200,7 +1210,12 @@
     <convert type="ConditionalShowHide">
     </convert>
   </widget>
-  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="2" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" position="963,654" size="37,19" zPosition="3" font="Regular;2" valign="top" halign="right" backgroundColor="#1e2e44" transparent="0" foregroundColor="#1e2e44">
+  <convert type="THDPremiumInfo">IsWidescreen</convert>
+  <convert type="ConditionalShowHide">
+  </convert>
+</widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="3" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
     <convert type="THDPremiumInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">
     </convert>
@@ -1353,7 +1368,12 @@
     <convert type="ConditionalShowHide">
     </convert>
   </widget>
-  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="2" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" position="963,654" size="37,19" zPosition="3" font="Regular;2" valign="top" halign="right" backgroundColor="#1e2e44" transparent="0" foregroundColor="#1e2e44">
+  <convert type="THDPremiumInfo">IsWidescreen</convert>
+  <convert type="ConditionalShowHide">
+  </convert>
+</widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="3" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
     <convert type="THDPremiumInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">
     </convert>
@@ -2536,7 +2556,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
     <convert type="ConditionalShowHide">
     </convert>
   </widget>
-  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="2" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" position="963,654" size="37,19" zPosition="3" font="Regular;2" valign="top" halign="right" backgroundColor="#1e2e44" transparent="0" foregroundColor="#1e2e44">
+  <convert type="THDPremiumInfo">IsWidescreen</convert>
+  <convert type="ConditionalShowHide">
+  </convert>
+</widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="B" position="951,641" zPosition="3" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
     <convert type="THDPremiumInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">
     </convert>
@@ -3030,7 +3055,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <convert type="ConditionalShowHide">
     </convert>
   </widget>
-  <widget source="session.CurrentService" render="FixedLabel" text="B" position="1060,599" zPosition="2" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" position="1072,613" size="37,19" zPosition="3" font="Regular;2" valign="top" halign="right" backgroundColor="#436fa1" transparent="0" foregroundColor="#436fa1">
+  <convert type="THDPremiumInfo">IsWidescreen</convert>
+  <convert type="ConditionalShowHide">
+  </convert>
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="B" position="1060,599" zPosition="3" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
     <convert type="THDPremiumInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">
     </convert>
@@ -4916,7 +4946,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <convert type="ConditionalShowHide">
     </convert>
   </widget>
-  <widget source="session.CurrentService" render="FixedLabel" text="B" position="1060,599" zPosition="2" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" position="1072,613" size="37,19" zPosition="3" font="Regular;2" valign="top" halign="right" backgroundColor="#436fa1" transparent="0" foregroundColor="#436fa1">
+  <convert type="THDPremiumInfo">IsWidescreen</convert>
+  <convert type="ConditionalShowHide">
+  </convert>
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="B" position="1060,599" zPosition="3" size="54,41" font="symbol;40" valign="top" halign="right" backgroundColor="dblau" transparent="1">
     <convert type="THDPremiumInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">
     </convert>
