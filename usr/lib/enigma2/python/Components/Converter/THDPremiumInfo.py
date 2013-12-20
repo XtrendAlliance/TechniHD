@@ -50,7 +50,7 @@ class THDPremiumInfo(Converter, object):
                                 idx = 0
 				while idx < n:
 					i = audio.getTrackInfo(idx)
-                                        languages = i.getLanguage().split('/')
+                                        languages = i.getLanguage()
                                         description = i.getDescription()
 					lange = language.getLanguage()
                                         if lange == 'de_DE':
