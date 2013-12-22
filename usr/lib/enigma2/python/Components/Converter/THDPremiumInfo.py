@@ -69,6 +69,13 @@ class THDPremiumInfo(Converter, object):
                                                                 return True
                                                         return False
 					        idx += 1
+					elif lange == 'it_IT':
+                                                if "Englisch" in languages or "English" in languages:
+						        return True
+                                                elif "DTS audio" in description or "AC-3 audio" in description:
+                                                        if n > 1:
+                                                                return True
+                                                        return False
 					else:
 					        return False
 			return False
