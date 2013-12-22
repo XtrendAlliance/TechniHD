@@ -69,6 +69,7 @@ class THDPremiumInfo(Converter, object):
                                                                 return True
                                                         return False
 					        idx += 1
+					return False
 			return False
 
 		elif self.type == self.SUBTITLES_AVAILABLE:
