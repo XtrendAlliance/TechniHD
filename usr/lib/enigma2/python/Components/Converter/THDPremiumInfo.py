@@ -76,6 +76,7 @@ class THDPremiumInfo(Converter, object):
                                                         if n > 1:
                                                                 return True
                                                         return False
+                                                idx += 1       
 					else:
 					        return False
 			return False
