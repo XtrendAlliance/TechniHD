@@ -7293,4 +7293,44 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1031,634" size="32,40" alphatest="blend" />
 </screen>
 <!-- DownloadCenter 0.1 end -->
+<screen name="AudioSelection" position="center,center" size="860,430" title="Audio">
+<widget name="config" position="62,6" itemHeight="40" font="Regular3;22" size="788,160" scrollbarMode="showOnDemand" />		
+<ePixmap pixmap="TechniHD/icons/language.png" zPosition="3" position="2,182" size="215,208" alphatest="blend" transparent="1" />		
+<widget source="key_red" render="Pixmap" pixmap="TechniHD/buttons/red.png" position="17,9" size="40,40" alphatest="on">
+  <convert type="ConditionalShowHide" />
+</widget>
+<widget source="key_green" render="Pixmap" pixmap="TechniHD/buttons/green.png" position="17,49" size="40,40" alphatest="on">
+  <convert type="ConditionalShowHide" />
+</widget>
+<widget source="key_yellow" render="Pixmap" pixmap="TechniHD/buttons/yellow.png" position="17,89" size="40,40" alphatest="on">
+  <convert type="ConditionalShowHide" />
+</widget>
+<widget source="key_blue" render="Pixmap" pixmap="TechniHD/buttons/blue.png" position="17,129" size="40,40" alphatest="on">
+  <convert type="ConditionalShowHide" />
+</widget>		
+<ePixmap pixmap="skin_default/div-h.png" position="6,179" zPosition="10" size="849,2" />
+		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="246,196" size="604,226" zPosition="3" transparent="1" selectionPixmap="Modern_Stone2_XD/menu/listselection780x25.png">
+			<convert type="TemplatedMultiContent">
+				{"templates":
+					{"default": (25, [ 
+						MultiContentEntryText(pos = (0, 0),   size = (38, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
+						MultiContentEntryText(pos = (10, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
+						MultiContentEntryText(pos = (60, 0), size = (100, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3, color = 0x00989797, color_sel = 0x00000000), # description,
+						MultiContentEntryText(pos = (180, 0), size = (320, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4, color = 0x00f7ba00, color_sel = 0x00000000), # language,
+						MultiContentEntryText(pos = (560, 4), size = (20, 25),  font = 0, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+					], True, "showOnDemand"),
+					"notselected": (25, [ 
+						MultiContentEntryText(pos = (0, 0),   size = (38, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
+						MultiContentEntryText(pos = (10, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
+						MultiContentEntryText(pos = (60, 0), size = (100, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3, color = 0x00989797, color_sel = 0x00000000), # description,
+						MultiContentEntryText(pos = (180, 0), size = (320, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4, color = 0x00f7ba00, color_sel = 0x00000000), # language,
+						MultiContentEntryText(pos = (560, 4), size = (20, 25),  font = 0, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+					], False, "showOnDemand")
+					},
+				"fonts": [gFont("Regular", 21), gFont("Regular", 17)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+	</screen>
 </skin>
