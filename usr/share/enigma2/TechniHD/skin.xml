@@ -7311,26 +7311,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 <ePixmap pixmap="skin_default/div-h.png" position="6,179" zPosition="10" size="849,2" />
 		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="246,196" size="604,226" zPosition="3" transparent="1" selectionPixmap="Modern_Stone2_XD/menu/listselection780x25.png">
 			<convert type="TemplatedMultiContent">
-				{"templates":
-					{"default": (25, [ 
-						MultiContentEntryText(pos = (0, 0),   size = (38, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
-						MultiContentEntryText(pos = (10, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
-						MultiContentEntryText(pos = (60, 0), size = (100, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3, color = 0x00989797, color_sel = 0x00000000), # description,
-						MultiContentEntryText(pos = (180, 0), size = (320, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4, color = 0x00f7ba00, color_sel = 0x00000000), # language,
-						MultiContentEntryText(pos = (560, 4), size = (20, 25),  font = 0, flags = RT_HALIGN_RIGHT, text = 5), # selection,
-					], True, "showOnDemand"),
-					"notselected": (25, [ 
-						MultiContentEntryText(pos = (0, 0),   size = (38, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
-						MultiContentEntryText(pos = (10, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
-						MultiContentEntryText(pos = (60, 0), size = (100, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3, color = 0x00989797, color_sel = 0x00000000), # description,
-						MultiContentEntryText(pos = (180, 0), size = (320, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4, color = 0x00f7ba00, color_sel = 0x00000000), # language,
-						MultiContentEntryText(pos = (560, 4), size = (20, 25),  font = 0, flags = RT_HALIGN_RIGHT, text = 5), # selection,
-					], False, "showOnDemand")
-					},
-				"fonts": [gFont("Regular", 21), gFont("Regular", 17)],
-				"itemHeight": 30
-				}
-			</convert>
+                                {"templates":
+                                        {"default": (25, [
+                                                MultiContentEntryText(pos = (0, 2), size = (38, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+                                                MultiContentEntryText(pos = (10, 2), size = (40, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+                                                MultiContentEntryText(pos = (60, 2), size = (110, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3, color = 0x00989797, color_sel = 0x00000000), # description,
+                                                MultiContentEntryText(pos = (180, 0), size = (320, 25), font = 1, flags = RT_HALIGN_LEFT, text = 4, color = 0x00f7ba00, color_sel = 0x00000000), # language,
+                                                MultiContentEntryText(pos = (560, 0), size = (20, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+                                        ], True, "showOnDemand"),
+                                        "notselected": (25, [
+                                                MultiContentEntryText(pos = (0, 2), size = (38, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+                                                MultiContentEntryText(pos = (10, 2), size = (40, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+                                                MultiContentEntryText(pos = (60, 2), size = (110, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3, color = 0x00989797, color_sel = 0x00000000), # description,
+                                                MultiContentEntryText(pos = (180, 0), size = (320, 25), font = 1, flags = RT_HALIGN_LEFT, text = 4, color = 0x00f7ba00, color_sel = 0x00000000), # language,
+                                                MultiContentEntryText(pos = (560, 0), size = (20, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+                                        ], False, "showOnDemand")
+                                        },
+                                "fonts": [gFont("hdi", 19), gFont("Regular", 21)],
+                                "itemHeight": 30
+                                }
+                        </convert>
 		</widget>
 	</screen>
 </skin>
