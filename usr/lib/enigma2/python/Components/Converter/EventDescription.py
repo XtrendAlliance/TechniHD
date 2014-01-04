@@ -22,7 +22,7 @@ class EventDescription(Converter, object):
 		        name = event.getEventName()
                         short = event.getShortDescription()
   	                extended = event.getExtendedDescription()
-                        empty = ""                 # <-- (empty=" ") string: you can now edit this string like -> (empty = "No Description") and it will show that string when "EventName" and "ShortDescription" has both the same info       
+                        empty = _("No description available.")                  
                         if short and short != name:         
                                  empty += ""     
                                  return short
