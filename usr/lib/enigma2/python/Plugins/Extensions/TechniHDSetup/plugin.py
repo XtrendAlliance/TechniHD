@@ -23,6 +23,7 @@ config.technihd = ConfigSubsection()
 config.technihd.SecondInfobar = ConfigSelection(default="NowAndNextInfo", choices = [("TunerAndCryptInfos", _("TunerState, Crypt, SNR,...")),("NowAndNextInfo", _("Now and Next EventInfo"))])
 config.technihd.Infobar = ConfigSelection(default="NextEventInfo", choices = [("BouquetInfo", _("BouquetInfo")),("NextEventInfo", _("Next EventInfo"))])
 config.technihd.InfobarSatPos = ConfigYesNo(default=False)
+config.technihd.channellist = ConfigSelection(default="left", choices = [("right", _("right")),("left", _("left"))])
 
 class TechniHDSetup(ConfigListScreen, Screen):
 	skin = """
@@ -47,6 +48,7 @@ class TechniHDSetup(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("Show SecondInfobar with:"), config.technihd.SecondInfobar))
 		list.append(getConfigListEntry(_("Show Infobar with:"), config.technihd.Infobar))
 		list.append(getConfigListEntry(_("Show Infobar with OrbitalPosition:"), config.technihd.InfobarSatPos))
+		list.append(getConfigListEntry(_("Show Channel Selection ScrollBarMode:"), config.technihd.channellist))
 		ConfigListScreen.__init__(self, list, on_change = self.UpdateComponents)
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"], 
 									{
@@ -88,6 +90,12 @@ class TechniHDSetup(ConfigListScreen, Screen):
 				elif 'OrbitPosAndChanNameInformation' in x:
 					if config.technihd.InfobarSatPos.value == False:
 						x = '<!-- ChannelNameInformation!! do not change this line --><widget source="session.CurrentService" render="Label" position="255,642" size="572,37" font="Regular; 30" valign="center" backgroundColor="background" transparent="1" zPosition="1"><convert type="ServiceName">Name</convert></widget>\n'
+				elif 'ScrollBarLeft' in x:
+					if config.technihd.channellist.value == "right":
+						x = '<!-- ScrollBarRight!! do not change this line --><widget name="list" selectionPixmap="TechniHD/menu/sel1280x40.png" picServiceEventProgressbar="TechniHD/progressbar.png" position="20,171" size="1237,442" zPosition="3" scrollbarMode="showOnDemand" backgroundColor="dblau" foregroundColorServiceNotAvail="grey" serviceItemHeight="40" serviceNumberFont="Regular2;24" colorServiceDescription="white" serviceNameFont="Regular2;29" serviceInfoFont="Regular3;23" transparent="1" colorServiceDescriptionSelected="dblau" colorEventProgressbar="yellow" colorEventProgressbarSelected="dblau" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="black"></widget>\n'
+				elif 'ScrollBarRight' in x:
+					if config.technihd.channellist.value == "left":
+						x = '<!-- ScrollBarLeft!! do not change this line --><widget name="list" selectionPixmap="TechniHD/menu/sel1280x40.png" picServiceEventProgressbar="TechniHD/progressbar.png" position="20,171" size="1237,442" zPosition="3" scrollbarMode="showLeft" backgroundColor="dblau" foregroundColorServiceNotAvail="grey" serviceItemHeight="40" serviceNumberFont="Regular2;24" colorServiceDescription="white" serviceNameFont="Regular2;29" serviceInfoFont="Regular3;23" transparent="1" colorServiceDescriptionSelected="dblau" colorEventProgressbar="yellow" colorEventProgressbarSelected="dblau" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="black"></widget>\n'
 				skFile.close()
                                 skin_lines.append(x)
 			xFile = open(self.datei, "w")
