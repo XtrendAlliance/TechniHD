@@ -2150,8 +2150,7 @@
     </eLabel>
     <eLabel position="20,153" size="1240,1" zPosition="3" backgroundColor="grey">
     </eLabel>
-    <widget name="list" selectionPixmap="TechniHD/menu/sel1280x40.png" picServiceEventProgressbar="TechniHD/progressbar.png" position="20,171" size="1237,442" zPosition="3" scrollbarMode="showLeft" backgroundColor="dblau" foregroundColorServiceNotAvail="grey" serviceItemHeight="40" serviceNumberFont="Regular2;24" colorServiceDescription="white" serviceNameFont="Regular2;29" serviceInfoFont="Regular3;23" transparent="1" colorServiceDescriptionSelected="dblau" colorEventProgressbar="yellow" colorEventProgressbarSelected="dblau" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="black">
-    </widget>
+    <!-- ScrollBarLeft!! do not change this line --><widget name="list" selectionPixmap="TechniHD/menu/sel1280x40.png" picServiceEventProgressbar="TechniHD/progressbar.png" position="20,171" size="1237,442" zPosition="3" scrollbarMode="showLeft" backgroundColor="dblau" foregroundColorServiceNotAvail="grey" serviceItemHeight="40" serviceNumberFont="Regular2;24" colorServiceDescription="white" serviceNameFont="Regular2;29" serviceInfoFont="Regular3;23" transparent="1" colorServiceDescriptionSelected="dblau" colorEventProgressbar="yellow" colorEventProgressbarSelected="dblau" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="black"></widget>
     <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend">
     </ePixmap>
     <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
