@@ -7332,4 +7332,483 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
                         </convert>
 		</widget>
 	</screen>
+<!-- CoolTVGuideStart-->
+<screen name="CoolChannelGuideDisabled" position="0,0" size="1280,720" title="Cool Channel Guide" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend" />
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1" />  
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1" />
+  <eLabel position="0,150" size="1280,468" zPosition="2" backgroundColor="dblau" />
+  <eLabel position="0,103" size="1280,47" zPosition="1" backgroundColor="hblau" />
+  <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    C  h  a  n  n  e  l    G  u  i  d  e" shadowColor="#000000" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <widget name="date" shadowColor="#000000" shadowOffset="2,1" position="535,103" zPosition="6" size="190,48" font="Regular; 25" valign="center" halign="center" transparent="1" backgroundColor="hblau" foregroundColor="#ffffff" />
+  <widget name="list" scrollbarMode="showOnDemand" CoolTime="0" foregroundColor="#ffffff" backgroundColor="dblau" CoolFontColSel="#0179e9" CoolBackColorSel="#00f7f7f7" enableWrapAround="1" CoolMarkerColor="#dcdddd" CoolMarkerPicHPos="5" CoolMarkerPos="20" CoolMarkerHPos="5" position="38,165" size="1190,440" itemHeight="40" zPosition="25" font="Regular2;40" CoolFont="Regular2;10" CoolServiceFont="Regular2;22" CoolEventFont="Regular2;22" CoolServiceSize="277" CoolEventSize="570" CoolServicePos="20" CoolServiceHPos="5" CoolEventPos="500" CoolEventHPos="6" CoolBarPos="337" CoolBarBorderWidth="1" CoolBar="1" CoolBarColor="#ffda05" CoolBarHPos="13" CoolBarSize="120" CoolBarHigh="13" CoolTimePos="305" CoolTimeHPos="6" CoolTimeSize="174" CoolDurationPos="1060" CoolDurationSize="100" CoolServiceColor="#d7d7e0" CoolDurationColor="#d7d7e0" CoolEventColor="#d7d7e0" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#909090" CoolCurrentCol="#0179e9" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="266,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="440,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="624,634" size="40,40" alphatest="blend" />
+  <widget name="key_red" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="303,637" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="479,637" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
+  <widget name="key_blue" position="663,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/back.png" zPosition="4" position="967,114" size="60,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/next.png" zPosition="4" position="1129,114" size="60,40" alphatest="blend" />
+  <eLabel text="MORE" position="1027,116" size="101,26" zPosition="4" font="Regular;22" halign="center" backgroundColor="black" transparent="1" valign="center" />
+  <widget source="Title" render="Label" position="68,115" size="421,32" zPosition="6" font="Regular;20" foregroundColor="#ffffff" backgroundColor="hblau" halign="left" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1045,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1098,634" size="80,40" alphatest="blend" />
+</screen>
+<screen name="CoolInfoGuideDisabled" position="0,0" size="1280,720" title="Cool Info Guide" flags="wfNoBorder" backgroundColor="transparent" zPosition="7">
+  <widget source="Service" render="Label" shadowColor="black" shadowOffset="3,2" position="62,135" zPosition="5" size="1152,42" font="Regular; 26" backgroundColor="background" transparent="1" halign="center">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="Event" font="Regular2; 22" position="center,249" render="Label" size="1160,30" transparent="1" foregroundColor="white" zPosition="8" backgroundColor="dblau" halign="center">
+  <convert type="EventDescription">Description</convert>
+  </widget>
+  <widget name="CoolEvent" position="60,191" size="1159,30" itemHeight="30" zPosition="5" CoolFont="Regular;25" CoolDayPos="0" CoolTimePos="60" CoolEventPos="250" CoolDurationPos="1040" CoolDaySize="60" CoolTimeSize="190" CoolDurationSize="120" CoolDayColor="#FF6600" CoolTimeColor="#3B98C9" CoolEventColor="#FF6600" CoolDurationColor="#3B98C9" CoolTunerCol="#909090" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="dblau" CoolBackColorSel="dblau" foregroundColor="#FFFFFF" backgroundColor="dblau" transparent="1" />
+  <ePixmap position="68,57" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend" />
+  <ePixmap position="0,48" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,179" size="1156,2" zPosition="6" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="0,102" size="1280,516" zPosition="-3" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="62,310" size="1154,290" zPosition="-2" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="64,312" size="1150,285" zPosition="-1" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    I  n  f  o    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="135,62" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" /> 
+  <widget name="CoolDescription" position="67,318" size="1142,277" font="Regular3;26" backgroundColor="dblau" transparent="1" zPosition="0" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="266,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="440,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="624,634" size="40,40" alphatest="blend" />
+  <widget name="key_red" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="303,637" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="479,637" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_blue" position="660,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+</screen>
+<screen name="CoolMultiGuideDisabled" position="0,0" size="1280,720" title="Cool Multi Guide" flags="wfNoBorder" backgroundColor="transparent">
+  <widget name="date" position="1065,677" size="180,30" font="Regular;26" halign="left" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" zPosition="6" />
+  <widget source="Event" render="Label" position="33,78" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="Event" render="Label" position="106,78" size="90,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:- %H:%M</convert>
+  </widget>
+  <widget source="Event" render="Label" position="213,74" size="609,35" font="Regular2; 28" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+  <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="Event" render="Label" position="33,125" zPosition="1" size="790,134" transparent="1" foregroundColor="white" backgroundColor="dblau" font="Regular3;21" valign="top" halign="left">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <ePixmap position="74,11" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="center,0" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="center,662" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,54" size="1280,616" zPosition="-4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="session.VideoPicture" render="Pig" position="884,75" size="355,190" backgroundColor="#ff000000" />
+  <eLabel position="34,114" size="791,2" zPosition="9" backgroundColor="grey" />
+  <eLabel position="36,300" size="1204,355" zPosition="-2" backgroundColor="dblau" />
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    M  u  l  t  i    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="141,14" zPosition="5" size="472,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <widget name="timeline_now" position="0,298" zPosition="2" size="19,360" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
+  <widget name="list" position="37,298" size="1200,360" CoolBorderColR="grey" CoolBorderColL="grey" scrollbarMode="showNever" transparent="1" />
+  <widget name="timeline_text" position="9,273" size="1230,30" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="32,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="201,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="371,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="546,678" size="40,40" alphatest="blend" />
+  <widget name="key_red" position="63,678" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="232,678" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="404,678" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
+  <widget name="key_blue" position="578,678" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+  <widget source="Title" render="Label" position="773,678" size="278,26" zPosition="6" font="hdi; 22" foregroundColor="#ffffff" backgroundColor="hblau" halign="center" transparent="1" />
+</screen>
+<screen name="CoolNiceGuideDisabled" position="0,0" size="1280,720" title="Cool Nice Guide" flags="wfNoBorder" backgroundColor="transparent">
+  <widget name="date" position="1065,677" size="180,30" font="Regular;26" halign="left" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" zPosition="6" />
+  <widget source="Event" render="Label" position="33,78" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="Event" render="Label" position="106,78" size="90,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:- %H:%M</convert>
+  </widget>
+  <widget source="Event" render="Label" position="213,74" size="609,35" font="Regular2; 28" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+  <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="Event" render="Label" position="33,125" zPosition="1" size="790,134" transparent="1" foregroundColor="white" backgroundColor="dblau" font="Regular3;21" valign="top" halign="left">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <ePixmap position="74,11" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="center,0" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="center,662" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,54" size="1280,616" zPosition="-4" backgroundColor="dblau">
+  </eLabel>
+  <widget source="session.VideoPicture" render="Pig" position="884,75" size="355,190" backgroundColor="#ff000000" />
+  <eLabel position="34,114" size="791,2" zPosition="9" backgroundColor="grey" />
+  <eLabel position="36,300" size="1204,355" zPosition="-2" backgroundColor="dblau" />
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    N  i  c  e    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="141,14" zPosition="5" size="472,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <widget name="timeline_now" position="0,298" zPosition="2" size="19,360" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
+  <widget name="list" position="37,298" size="1200,360" CoolBorderColR="grey" CoolBorderColL="grey" scrollbarMode="showNever" transparent="1" />
+  <widget name="timeline_text" position="9,273" size="1230,30" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="32,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="201,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="371,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="546,678" size="40,40" alphatest="blend" />
+  <widget name="key_red" position="63,678" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="232,678" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="404,678" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
+  <widget name="key_blue" position="578,678" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+  <widget source="Title" render="Label" position="773,678" size="278,26" zPosition="6" font="hdi; 22" foregroundColor="#ffffff" backgroundColor="hblau" halign="center" transparent="1" />
+</screen>
+<screen name="CoolEasyGuideDisabled" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel position="0,481" size="1280,2" zPosition="9" backgroundColor="grey" />
+  <widget source="Event" render="Label" position="45,495" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="Event" render="Label" position="114,495" size="90,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:- %H:%M</convert>
+  </widget>
+  <widget source="Event" render="Label" position="227,497" size="998,23" font="Regular;21" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventDescription">Description</convert>
+  </widget>  
+  <widget source="Event" render="Label" position="50,527" size="1177,81" transparent="1" zPosition="7" foregroundColor="white" backgroundColor="dblau" font="Regular3; 22" valign="top" halign="left">
+  <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend" />
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1" />  
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1" />
+  <eLabel position="0,150" size="1280,468" zPosition="-2" backgroundColor="dblau" />
+  <eLabel position="0,103" size="1280,47" zPosition="1" backgroundColor="hblau" />
+  <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>  
+  <eLabel text="C  o  o  l    E  a  s  y    G  u  i  d  e" shadowColor="#000000" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <widget name="date" shadowColor="#000000" shadowOffset="2,1" position="535,103" zPosition="6" size="190,48" font="Regular; 25" valign="center" halign="center" transparent="1" backgroundColor="hblau" foregroundColor="#ffffff" />
+  <widget name="list" scrollbarMode="showOnDemand" foregroundColor="#ffffff" backgroundColor="dblau" CoolFontColSel="#0179e9" CoolBackColorSel="#00f7f7f7" enableWrapAround="1" position="38,165" size="1190,288" itemHeight="40" zPosition="6" CoolFont="Regular2;19" CoolServiceFont="Regular2;22" CoolEventFont="Regular2;22" CoolServiceSize="277" CoolEventSize="560" CoolServicePos="20" CoolServiceHPos="4" CoolEventPos="500" CoolEventHPos="4" CoolBarPos="330" CoolBarBorderWidth="1" CoolBarColor="#ffda05" CoolBarHPos="12" CoolBarSize="120" CoolBarHigh="13" CoolTimePos="305" CoolTimeHPos="6" CoolTimeSize="174" CoolDurationPos="1100" CoolDurationSize="100" CoolServiceColor="#d7d7e0" CoolDurationColor="#d7d7e0" CoolEventColor="#d7d7e0" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#909090" CoolCurrentCol="#0179e9" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="266,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="440,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="624,634" size="40,40" alphatest="blend" />
+  <widget name="key_red" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="303,637" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="479,637" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
+  <widget name="key_blue" position="663,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/back.png" zPosition="4" position="967,114" size="60,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/next.png" zPosition="4" position="1129,114" size="60,40" alphatest="blend" />
+  <eLabel text="MORE" position="1027,116" size="101,26" zPosition="4" font="Regular;22" halign="center" backgroundColor="black" transparent="1" valign="center" />
+  <widget source="Title" render="Label" position="68,115" size="421,32" zPosition="6" font="Regular;20" foregroundColor="#ffffff" backgroundColor="hblau" halign="left" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1045,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1098,634" size="80,40" alphatest="blend" />
+</screen>
+<screen name="CoolTVGuideDisabled" position="0,0" size="1280,720" title="Cool TV Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
+  <widget source="Title" render="Label" position="255,591" size="835,27" font="hd;22" halign="left" shadowColor="black" shadowOffset="-1,-1" backgroundColor="hblau" transparent="1" zPosition="10" />
+  <widget source="Event" render="Label" position="253,523" size="833,35" font="Regular2; 28" halign="left" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="Event" render="Label" position="1098,535" size="100,20" font="Regular;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget font="Regular2; 20" position="255,562" render="Label" size="834,25" source="Event" shadowColor="black" shadowOffset="-1,-1" transparent="1" foregroundColor="white" zPosition="10" backgroundColor="hblau" halign="left">
+    <convert type="EventDescription">Description</convert>
+  </widget>
+  <widget source="Event" render="Label" position="88,523" size="75,24" font="Regular2;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <eLabel text="-" position="159,523" size="15,24" font="Regular2;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+  </eLabel>
+  <widget source="Event" render="Label" position="170,523" size="75,24" font="Regular2;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="Event" render="Progress" position="90,551" size="150,7" pixmap="TechniHD/progressbar.png" transparent="1" zPosition="11">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <eLabel position="90,551" size="150,7" zPosition="10" backgroundColor="un9b9ca1">
+  </eLabel>
+  <widget name="timeline_now" position="0,147" zPosition="11" size="19,362" pixmap="TechniHD/timeline-now.png" alphatest="on" />
+  <eLabel position="0,521" size="1280,96" zPosition="2" backgroundColor="hblau2">
+  </eLabel>
+  <widget name="list" CoolNowCol="#0179e9" CoolBorderColL="grey" CoolBorderColR="grey" position="73,147" size="1140,362" scrollbarMode="showNever" transparent="1" />
+  <eLabel position="73,114" size="1141,31" zPosition="1" backgroundColor="hblau" />
+  <widget name="timeline_text" position="30,117" size="1141,31" transparent="1" foregroundColor="yellow" backgroundColor="hblau" zPosition="8" />
+  <widget name="date" shadowColor="black" shadowOffset="-1,-1" position="88,564" size="152,23" font="Regular2; 17" halign="center" transparent="1" backgroundColor="black" zPosition="9" />
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="0,102" size="1280,516" zPosition="-7" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="0,523" size="1280,97" zPosition="4" backgroundColor="hblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    T  V    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="309,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="514,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="721,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="135,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_green" position="342,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+  </widget>
+  <widget name="key_yellow" position="546,636" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_blue" position="756,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1045,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1098,634" size="80,40" alphatest="blend">
+  </ePixmap>
+</screen>
+<screen name="CoolTinyGuideDisabled" position="0,0" size="1280,720" title="Cool Tiny Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
+  <widget source="Title" render="Label" position="255,591" size="835,27" font="hd;22" halign="left" shadowColor="black" shadowOffset="-1,-1" backgroundColor="hblau" transparent="1" zPosition="10" />
+  <widget source="Event" render="Label" position="253,523" size="833,35" font="Regular2; 28" halign="left" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="Event" render="Label" position="1098,535" size="100,20" font="Regular;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget font="Regular2; 20" position="255,562" render="Label" size="834,25" source="Event" shadowColor="black" shadowOffset="-1,-1" transparent="1" foregroundColor="white" zPosition="10" backgroundColor="hblau" halign="left">
+    <convert type="EventDescription">Description</convert>
+  </widget>
+  <widget source="Event" render="Label" position="88,523" size="75,24" font="Regular2;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <eLabel text="-" position="159,523" size="15,24" font="Regular2;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+  </eLabel>
+  <widget source="Event" render="Label" position="170,523" size="75,24" font="Regular2;21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1" zPosition="10">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="Event" render="Progress" position="90,551" size="150,7" pixmap="TechniHD/progressbar.png" transparent="1" zPosition="11">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <eLabel position="90,551" size="150,7" zPosition="10" backgroundColor="un9b9ca1">
+  </eLabel>
+  <widget name="timeline_now" position="0,147" zPosition="11" size="19,362" pixmap="TechniHD/timeline-now.png" alphatest="on" />
+  <eLabel position="0,521" size="1280,96" zPosition="2" backgroundColor="hblau2">
+  </eLabel>
+  <widget name="list" CoolBorderColL="grey" CoolBorderColR="grey" position="73,147" size="1140,362" scrollbarMode="showNever" transparent="1" />
+  <eLabel position="73,114" size="1141,31" zPosition="1" backgroundColor="hblau" />
+  <widget name="timeline_text" position="30,117" size="1141,31" transparent="1" foregroundColor="yellow" backgroundColor="hblau" zPosition="8" />
+  <widget name="date" shadowColor="black" shadowOffset="-1,-1" position="88,564" size="152,23" font="Regular2; 17" halign="center" transparent="1" backgroundColor="black" zPosition="9" />
+  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="0,102" size="1280,516" zPosition="-7" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="0,523" size="1280,97" zPosition="4" backgroundColor="hblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    T  i  n  y    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1">
+  </eLabel>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="309,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="514,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="721,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <widget name="key_red" position="135,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_green" position="342,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+  </widget>
+  <widget name="key_yellow" position="546,636" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center">
+  </widget>
+  <widget name="key_blue" position="756,637" size="164,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1045,634" size="40,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1098,634" size="80,40" alphatest="blend">
+  </ePixmap>
+</screen>
+<screen name="CoolSearchDisabled" position="0,0" size="1280,720" title="Cool Search" flags="wfNoBorder" backgroundColor="transparent" zPosition="7">
+  <widget source="Event" render="Label" shadowColor="black" shadowOffset="3,2" position="62,133" zPosition="5" size="1152,30" font="Regular; 26" backgroundColor="background" transparent="1" halign="center">
+   <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="Event" font="Regular2; 22" position="62,178" render="Label" size="1152,30" transparent="1" foregroundColor="white" zPosition="8" backgroundColor="dblau" halign="center">
+  <convert type="EventDescription">Description</convert>
+  </widget>
+  <widget name="list" CoolFontColSel="#000000" position="68,367" size="1142,227" itemHeight="56" zPosition="9" CoolFont="hdi;18" CoolServiceFont="Regular;21" CoolEventFont="Regular2;19" CoolDayPos="0" CoolDayHPos="27" CoolDatePos="22" CoolDateHPos="2" CoolTimePos="80" CoolTimeHPos="27" CoolServicePos="151" CoolServiceHPos="2" CoolEventPos="151" CoolEventHPos="25" CoolDaySize="50" CoolDateSize="70" CoolTimeSize="70" CoolServiceSize="580" CoolEventSize="1100" CoolServiceColor="#ffda05" CoolEventColor="#aaaaaa" CoolDateColor="#FFFFFF" CoolTimeColor="#aaaaaa" CoolDayColor="#FFFFFF" CoolBackColor="dblau" CoolBackColorSel="#ffffff" CoolRecEventBackColor="dblau" CoolRecAlarmCol="#B59E01" CoolRecColor="#ff0000" backgroundColor="dblau" scrollbarMode="showOnDemand" transparent="1" />
+  <ePixmap position="68,57" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend" />
+  <ePixmap position="0,48" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,169" size="1156,2" zPosition="6" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="0,102" size="1280,516" zPosition="-3" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="62,361" size="1154,238" zPosition="-2" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="64,363" size="1150,234" zPosition="-1" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,57" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,57" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    S  e  a  r  c  h" shadowColor="black" shadowOffset="3,2" position="135,62" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" /> 
+  <widget source="Event" render="Label" position="62,214" size="1152,136" transparent="1" zPosition="7" foregroundColor="white" backgroundColor="dblau" font="Regular3; 19" valign="top" halign="left">
+  <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="272,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="444,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="624,634" size="40,40" alphatest="blend" />
+  <widget name="key_red" position="135,637" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="303,637" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="479,637" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_blue" position="660,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+</screen>
+<screen name="CoolSingleGuideDisabled" position="0,0" size="1280,720" title="Cool Single Guide" flags="wfNoBorder" backgroundColor="transparent">
+  <widget source="Event" render="Label" position="33,125" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="Event" render="Label" position="106,125" size="90,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:- %H:%M</convert>
+  </widget>
+  <widget source="Service" render="Label" shadowColor="black" shadowOffset="3,2" position="33,72" size="790,38" font="Regular; 28" halign="center" backgroundColor="background" transparent="1">
+  <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="Event" render="Label" position="209,123" size="615,31" font="Regular; 25" halign="left" backgroundColor="background" transparent="1">
+  <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="Event" render="Label" position="39,159" zPosition="1" size="794,134" transparent="1" foregroundColor="white" backgroundColor="dblau" font="Regular3;21" valign="top" halign="left">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <ePixmap position="74,11" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend">
+  </ePixmap>
+  <ePixmap position="center,0" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <ePixmap position="center,662" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1">
+  </ePixmap>
+  <eLabel position="center,54" size="1280,616" zPosition="-4" backgroundColor="dblau">
+  </eLabel>
+  <eLabel position="34,297" size="1208,361" zPosition="-3" backgroundColor="grey">
+  </eLabel>
+  <widget source="session.VideoPicture" render="Pig" position="884,75" size="355,190" backgroundColor="#ff000000" />
+  <eLabel position="34,114" size="791,2" zPosition="9" backgroundColor="grey">
+  </eLabel>
+  <eLabel position="36,300" size="1204,355" zPosition="-2" backgroundColor="dblau">
+  </eLabel>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">ShortDay</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+    <convert type="THDClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <eLabel text="C  o  o  l    S  i  n  g  l  e    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="141,14" zPosition="5" size="545,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <widget name="timeline_now" position="0,298" zPosition="2" size="19,360" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
+  <widget name="list" CoolFontColSel="#000000" position="42,310" size="1192,344" itemHeight="57" zPosition="9" CoolFont="hdi;18" CoolEventFont="Regular;21" CoolDayPos="0" CoolDayHPos="0" CoolDaySize="50" CoolTimePos="70" CoolTimeSize="70" CoolEventPos="73" CoolEventHPos="22" CoolEventSize="1100" CoolDayColor="#ffda05" CoolTimeColor="#ffda05" CoolEventColor="#FFFFFF" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="dblau" CoolBackColorSel="#ffffff" backgroundColor="dblau" transparent="1" scrollbarMode="showOnDemand"/>
+  <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="32,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="201,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="371,678" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="546,678" size="40,40" alphatest="blend" />
+  <widget name="key_red" position="63,678" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="232,678" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="404,678" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
+  <widget name="key_blue" position="578,678" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <ePixmap pixmap="TechniHD/buttons/back.png" zPosition="4" position="999,678" size="60,40" alphatest="blend">
+  </ePixmap>
+  <ePixmap pixmap="TechniHD/buttons/next.png" zPosition="4" position="1181,678" size="60,40" alphatest="blend">
+  </ePixmap>
+  <eLabel text="Channel" position="1058,680" size="122,26" zPosition="4" font="Regular;22" halign="center" backgroundColor="black" transparent="1" valign="center">
+  </eLabel>
+</screen>
+<!-- CoolTVGuideEnd-->
 </skin>
