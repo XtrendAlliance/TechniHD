@@ -4,7 +4,7 @@
 #    Original Source Coded by Vali (c)2011 (FlexControl)
 #
 #######################################################################
-                                                            
+                                                          
 
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
@@ -24,6 +24,7 @@ config.technihd.SecondInfobar = ConfigSelection(default="NowAndNextInfo", choice
 config.technihd.Infobar = ConfigSelection(default="NextEventInfo", choices = [("BouquetInfo", _("BouquetInfo")),("NextEventInfo", _("Next EventInfo"))])
 config.technihd.InfobarSatPos = ConfigYesNo(default=False)
 config.technihd.channellist = ConfigSelection(default="left", choices = [("right", _("right")),("left", _("left"))])
+config.technihd.cooltvguide = ConfigYesNo(default=False)
 
 class TechniHDSetup(ConfigListScreen, Screen):
 	skin = """
@@ -49,6 +50,8 @@ class TechniHDSetup(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("Show Infobar with:"), config.technihd.Infobar))
 		list.append(getConfigListEntry(_("Show Infobar with OrbitalPosition:"), config.technihd.InfobarSatPos))
 		list.append(getConfigListEntry(_("Show Channel Selection ScrollBarMode:"), config.technihd.channellist))
+		if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/plugin.pyo') and not fileExists('/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/CoolInfoGuide.pyo'):
+                        list.append(getConfigListEntry(_("Show TechniHD - CoolTVGuide Skin:"), config.technihd.cooltvguide))
 		ConfigListScreen.__init__(self, list, on_change = self.UpdateComponents)
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"], 
 									{
@@ -96,7 +99,61 @@ class TechniHDSetup(ConfigListScreen, Screen):
 				elif 'ScrollBarRight' in x:
 					if config.technihd.channellist.value == "left":
 						x = '<!-- ScrollBarLeft!! do not change this line --><widget name="list" selectionPixmap="TechniHD/menu/sel1280x40.png" picServiceEventProgressbar="TechniHD/progressbar.png" position="20,171" size="1237,442" zPosition="3" scrollbarMode="showLeft" backgroundColor="dblau" foregroundColorServiceNotAvail="grey" serviceItemHeight="40" serviceNumberFont="Regular2;24" colorServiceDescription="white" serviceNameFont="Regular2;29" serviceInfoFont="Regular3;23" transparent="1" colorServiceDescriptionSelected="dblau" colorEventProgressbar="yellow" colorEventProgressbarSelected="dblau" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="black"></widget>\n'
-				skFile.close()
+				elif 'name="CoolChannelGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide" flags="wfNoBorder" backgroundColor="transparent">\n' 
+				elif 'name="CoolChannelGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolChannelGuideDisabled" position="0,0" size="1280,720" title="Cool Channel Guide" flags="wfNoBorder" backgroundColor="transparent">\n'
+                                elif 'name="CoolInfoGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolInfoGuide" position="0,0" size="1280,720" title="Cool Info Guide" flags="wfNoBorder" backgroundColor="transparent" zPosition="7">\n' 
+				elif 'name="CoolInfoGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolInfoGuideDisabled" position="0,0" size="1280,720" title="Cool Info Guide" flags="wfNoBorder" backgroundColor="transparent" zPosition="7">\n'
+                                elif 'name="CoolMultiGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolMultiGuide" position="0,0" size="1280,720" title="Cool Multi Guide" flags="wfNoBorder" backgroundColor="transparent">\n' 
+				elif 'name="CoolMultiGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolMultiGuideDisabled" position="0,0" size="1280,720" title="Cool Multi Guide" flags="wfNoBorder" backgroundColor="transparent">\n'
+                                elif 'name="CoolNiceGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolNiceGuide" position="0,0" size="1280,720" title="Cool Nice Guide" flags="wfNoBorder" backgroundColor="transparent">\n' 
+				elif 'name="CoolNiceGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolNiceGuideDisabled" position="0,0" size="1280,720" title="Cool Nice Guide" flags="wfNoBorder" backgroundColor="transparent">\n'
+                                elif 'name="CoolEasyGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolEasyGuide" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">\n' 
+				elif 'name="CoolEasyGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolEasyGuideDisabled" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">\n'
+                                elif 'name="CoolTVGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolTVGuide" position="0,0" size="1280,720" title="Cool TV Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">\n' 
+				elif 'name="CoolTVGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolTVGuideDisabled" position="0,0" size="1280,720" title="Cool TV Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">\n'
+                                elif 'name="CoolTinyGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolTinyGuide" position="0,0" size="1280,720" title="Cool Tiny Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">\n' 
+				elif 'name="CoolTinyGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolTinyGuideDisabled" position="0,0" size="1280,720" title="Cool Tiny Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">\n'
+                                elif 'name="CoolSearchDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolSearch" position="0,0" size="1280,720" title="Cool Search" flags="wfNoBorder" backgroundColor="transparent" zPosition="7">\n' 
+				elif 'name="CoolSearch"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolSearchDisabled" position="0,0" size="1280,720" title="Cool Search" flags="wfNoBorder" backgroundColor="transparent" zPosition="7">\n'
+                                elif 'name="CoolSingleGuideDisabled"' in x:				
+                                        if config.technihd.cooltvguide.value == True:
+                                                x = '<screen name="CoolSingleGuide" position="0,0" size="1280,720" title="Cool Single Guide" flags="wfNoBorder" backgroundColor="transparent">\n' 
+				elif 'name="CoolSingleGuide"' in x:
+					if config.technihd.cooltvguide.value == False:
+					        x = '<screen name="CoolSingleGuideDisabled" position="0,0" size="1280,720" title="Cool Single Guide" flags="wfNoBorder" backgroundColor="transparent">\n'                                
+                                skFile.close()
                                 skin_lines.append(x)
 			xFile = open(self.datei, "w")
 			for x in skin_lines:
