@@ -7507,21 +7507,90 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget name="key_blue" position="578,678" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
   <widget source="Title" render="Label" position="773,678" size="278,26" zPosition="6" font="hdi; 22" foregroundColor="#ffffff" backgroundColor="hblau" halign="center" transparent="1" />
 </screen>
-<screen name="CoolEasyGuideDisabled" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">
-  <eLabel position="0,481" size="1280,2" zPosition="9" backgroundColor="grey" />
-  <widget source="Event" render="Label" position="45,495" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+<screen name="CoolEasyGuideDisbaled" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel position="64,159" size="428,451" zPosition="8" backgroundColor="grey" />
+  <eLabel position="66,161" size="424,447" zPosition="9" backgroundColor="ddblau" />
+  <widget source="Service" render="Label" zPosition="18" position="501,173" size="75,24" font="Regular2; 21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1">
     <convert type="EventTime">StartTime</convert>
     <convert type="ClockToText">Format:%H:%M</convert>
   </widget>
-  <widget source="Event" render="Label" position="114,495" size="90,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
+  <widget source="Service" render="Label" zPosition="18" position="575,173" size="90,24" font="Regular2; 21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1">
     <convert type="EventTime">EndTime</convert>
     <convert type="ClockToText">Format:- %H:%M</convert>
   </widget>
-  <widget source="Event" render="Label" position="227,497" size="998,23" font="Regular;21" halign="left" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
-    <convert type="EventDescription">Description</convert>
-  </widget>  
-  <widget source="Event" render="Label" position="50,527" size="1177,81" transparent="1" zPosition="7" foregroundColor="white" backgroundColor="dblau" font="Regular3; 22" valign="top" halign="left">
-  <convert type="EventName">ExtendedDescription</convert>
+  <widget source="Service" render="Progress" position="509,199" size="150,7" backgroundColor="un9b9ca1" foregroundColor="un9b9ca1" transparent="1" zPosition="12">
+  <convert type="THDEventProgress">Background</convert>
+  </widget>
+  <widget source="Service" render="Progress" position="509,199" size="150,7" pixmap="TechniHD/progressbar.png" transparent="1" zPosition="13">
+  <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,172" size="612,29" zPosition="5" font="Regular2; 22" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event1,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1124,172" size="100,28" zPosition="5" font="Regular2; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="EventTime">Remaining</convert>
+  <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <eLabel position="500,167" size="170,39" zPosition="10" backgroundColor="dblau" />
+  <widget source="Service" render="Label" position="505,211" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event2,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,212" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event2,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,250" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event3,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,251" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event3,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,289" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event4,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,290" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event4,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,328" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event5,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,329" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event5,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,367" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event6,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,368" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event6,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,406" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event7,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,407" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event7,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,445" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event8,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,446" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event8,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,484" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event9,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,485" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event9,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,523" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event10,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,524" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event10,onlyDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="505,562" size="612,29" zPosition="5" font="Regular3; 23" halign="left" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event11,noDuration</convert>
+  </widget>
+  <widget source="Service" render="Label" position="1123,563" size="100,28" zPosition="5" font="Regular3; 18" halign="right" backgroundColor="dblau" transparent="1" valign="center">
+  <convert type="THDNextEvents">Event11,onlyDuration</convert>
   </widget>
   <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend" />
   <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1" />  
@@ -7538,8 +7607,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <convert type="THDClockToText">Format:%d.%m.%Y</convert>
   </widget>  
   <eLabel text="C  o  o  l    E  a  s  y    G  u  i  d  e" shadowColor="#000000" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
-  <widget name="date" shadowColor="#000000" shadowOffset="2,1" position="535,103" zPosition="6" size="190,48" font="Regular; 25" valign="center" halign="center" transparent="1" backgroundColor="hblau" foregroundColor="#ffffff" />
-  <widget name="list" scrollbarMode="showOnDemand" foregroundColor="#ffffff" backgroundColor="dblau" CoolFontColSel="#0179e9" CoolBackColorSel="#00f7f7f7" enableWrapAround="1" position="38,165" size="1190,288" itemHeight="40" zPosition="6" CoolFont="Regular2;19" CoolServiceFont="Regular2;22" CoolEventFont="Regular2;22" CoolServiceSize="277" CoolEventSize="560" CoolServicePos="20" CoolServiceHPos="4" CoolEventPos="500" CoolEventHPos="4" CoolBarPos="330" CoolBarBorderWidth="1" CoolBarColor="#ffda05" CoolBarHPos="12" CoolBarSize="120" CoolBarHigh="13" CoolTimePos="305" CoolTimeHPos="6" CoolTimeSize="174" CoolDurationPos="1100" CoolDurationSize="100" CoolServiceColor="#d7d7e0" CoolDurationColor="#d7d7e0" CoolEventColor="#d7d7e0" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#909090" CoolCurrentCol="#0179e9" transparent="1" />
+  <widget name="list" scrollbarMode="showLeft" foregroundColor="#ffffff" backgroundColor="ddblau" CoolFontColSel="#000000" CoolBackColorSel="#ffffff" enableWrapAround="1" position="40,163" size="447,444" itemHeight="40" zPosition="10" CoolFont="Regular2;23" CoolServiceFont="Regular;23" CoolEventFont="Regular2;22" CoolServiceSize="347" CoolEventSize="560" CoolServicePos="20" CoolServiceHPos="6" CoolEventPos="900" CoolEventHPos="4" CoolBarPos="1230" CoolBarBorderWidth="1" CoolBarColor="#ffda05" CoolBarHPos="12" CoolBarSize="120" CoolBarHigh="13" CoolTimePos="1205" CoolTimeHPos="6" CoolTimeSize="174" CoolDurationPos="1100" CoolDurationSize="100" CoolServiceColor="#d7d7e0" CoolDurationColor="#d7d7e0" CoolEventColor="#d7d7e0" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#909090" CoolCurrentCol="#0179e9" transparent="1" />
   <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="266,634" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="440,634" size="40,40" alphatest="blend" />
@@ -7548,11 +7616,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget name="key_green" position="303,637" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
   <widget name="key_yellow" position="479,637" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
   <widget name="key_blue" position="663,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-  <ePixmap pixmap="TechniHD/buttons/back.png" zPosition="4" position="967,114" size="60,40" alphatest="blend" />
-  <ePixmap pixmap="TechniHD/buttons/next.png" zPosition="4" position="1129,114" size="60,40" alphatest="blend" />
-  <eLabel text="MORE" position="1027,116" size="101,26" zPosition="4" font="Regular;22" halign="center" backgroundColor="black" transparent="1" valign="center" />
-  <widget source="Title" render="Label" position="68,115" size="421,32" zPosition="6" font="Regular;20" foregroundColor="#ffffff" backgroundColor="hblau" halign="left" transparent="1" />
-  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1045,634" size="40,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/ok.png" zPosition="4" position="1051,112" size="30,32" alphatest="blend" />  
+  <eLabel text="Zap" position="1088,114" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <widget source="Title" render="Label" position="70,115" size="421,32" zPosition="6" font="Regular;20" foregroundColor="#ffffff" backgroundColor="hblau" halign="left" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="500,112" size="40,40" alphatest="blend" />
+  <eLabel text="CoolInfoGuide" position="536,114" size="176,24" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
   <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1098,634" size="80,40" alphatest="blend" />
 </screen>
 <screen name="CoolTVGuideDisabled" position="0,0" size="1280,720" title="Cool TV Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
