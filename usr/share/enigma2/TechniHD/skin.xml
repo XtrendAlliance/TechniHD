@@ -7334,7 +7334,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 <!-- CoolTVGuideStart-->
 <screen name="CoolChannelGuideDisabled" position="0,0" size="1280,720" title="Cool Channel Guide" flags="wfNoBorder" backgroundColor="transparent">
-  <ePixmap position="76,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend" />
+  <ePixmap position="71,51" zPosition="4" size="56,46" pixmap="TechniHD/menu/sfi-logo.png" transparent="1" alphatest="blend" />
   <ePixmap position="0,44" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1" />  
   <ePixmap position="0,618" zPosition="3" size="1280,59" pixmap="TechniHD/menu/borderlong.png" transparent="1" />
   <eLabel position="0,150" size="1280,468" zPosition="2" backgroundColor="dblau" />
@@ -7348,7 +7348,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="THDClockToText">Format:%d.%m.%Y</convert>
   </widget>
-  <eLabel text="C  o  o  l    C  h  a  n  n  e  l    G  u  i  d  e" shadowColor="#000000" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <eLabel text="Cool Channel Guide" shadowColor="#000000" shadowOffset="3,2" position="130,59" zPosition="5" size="256,37" font="Regular; 25" backgroundColor="background" transparent="1" />
+  <eLabel shadowColor="#000000" shadowOffset="3,2" position="386,62" zPosition="5" size="26,27" font="Console; 29" backgroundColor="background" transparent="1" text="&gt;" valign="top" halign="left" />
+  <widget source="Title" render="Label" shadowColor="#000000" shadowOffset="3,2" position="416,59" size="440,37" zPosition="6" font="Regular; 25" backgroundColor="background" halign="left" transparent="1" />
   <widget name="date" shadowColor="#000000" shadowOffset="2,1" position="535,103" zPosition="6" size="190,48" font="Regular; 25" valign="center" halign="center" transparent="1" backgroundColor="hblau" foregroundColor="#ffffff" />
   <widget name="list" scrollbarMode="showOnDemand" CoolTime="0" foregroundColor="#ffffff" backgroundColor="dblau" CoolFontColSel="#0179e9" CoolBackColorSel="#00f7f7f7" enableWrapAround="1" CoolMarkerColor="#dcdddd" CoolMarkerPicHPos="5" CoolMarkerPos="20" CoolMarkerHPos="5" position="38,165" size="1190,440" itemHeight="40" zPosition="25" font="Regular2;40" CoolFont="Regular2;10" CoolServiceFont="Regular2;22" CoolEventFont="Regular2;22" CoolServiceSize="277" CoolEventSize="570" CoolServicePos="20" CoolServiceHPos="5" CoolEventPos="500" CoolEventHPos="6" CoolBarPos="337" CoolBarBorderWidth="1" CoolBar="1" CoolBarColor="#ffda05" CoolBarHPos="13" CoolBarSize="120" CoolBarHigh="13" CoolTimePos="305" CoolTimeHPos="6" CoolTimeSize="174" CoolDurationPos="1060" CoolDurationSize="100" CoolServiceColor="#d7d7e0" CoolDurationColor="#d7d7e0" CoolEventColor="#d7d7e0" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#909090" CoolCurrentCol="#0179e9" transparent="1" />
   <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend" />
@@ -7362,7 +7364,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <ePixmap pixmap="TechniHD/buttons/back.png" zPosition="4" position="967,114" size="60,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/next.png" zPosition="4" position="1129,114" size="60,40" alphatest="blend" />
   <eLabel text="MORE" position="1027,116" size="101,26" zPosition="4" font="Regular;22" halign="center" backgroundColor="black" transparent="1" valign="center" />
-  <widget source="Title" render="Label" position="68,115" size="421,32" zPosition="6" font="Regular;20" foregroundColor="#ffffff" backgroundColor="hblau" halign="left" transparent="1" />
+  <ePixmap pixmap="TechniHD/buttons/plusminus.png" zPosition="4" position="67,111" size="61,29" alphatest="blend" />
+  <eLabel text="Select a bouquet" position="133,114" size="231,24" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
   <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="1045,634" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1098,634" size="80,40" alphatest="blend" />
 </screen>
@@ -7507,7 +7510,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget name="key_blue" position="578,678" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
   <widget source="Title" render="Label" position="773,678" size="278,26" zPosition="6" font="hdi; 22" foregroundColor="#ffffff" backgroundColor="hblau" halign="center" transparent="1" />
 </screen>
-<screen name="CoolEasyGuideDisbaled" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">
+<screen name="CoolEasyGuideDisabled" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel position="64,159" size="428,451" zPosition="8" backgroundColor="grey" />
   <eLabel position="66,161" size="424,447" zPosition="9" backgroundColor="ddblau" />
   <widget source="Service" render="Label" zPosition="18" position="501,173" size="75,24" font="Regular2; 21" halign="center" backgroundColor="hblau" shadowColor="black" shadowOffset="-1,-1" transparent="1">
@@ -7606,7 +7609,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget source="global.CurrentTime" render="Label" shadowColor="#000000" shadowOffset="3,2" zPosition="5" position="937,57" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="THDClockToText">Format:%d.%m.%Y</convert>
   </widget>  
-  <eLabel text="C  o  o  l    E  a  s  y    G  u  i  d  e" shadowColor="#000000" shadowOffset="3,2" position="141,57" zPosition="5" size="588,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <eLabel text="Cool Easy Guide" shadowColor="#000000" shadowOffset="3,2" position="141,59" zPosition="5" size="215,37" font="Regular; 25" backgroundColor="background" transparent="1" />
+  <eLabel shadowColor="#000000" shadowOffset="3,2" position="356,62" zPosition="5" size="26,27" font="Console; 29" backgroundColor="background" transparent="1" text="&gt;" valign="top" halign="left" />
+  <widget source="Title" render="Label" shadowColor="#000000" shadowOffset="3,2" position="386,59" size="446,37" zPosition="6" font="Regular; 25" backgroundColor="background" halign="left" transparent="1" />
   <widget name="list" scrollbarMode="showLeft" foregroundColor="#ffffff" backgroundColor="ddblau" CoolFontColSel="#000000" CoolBackColorSel="#ffffff" enableWrapAround="1" position="40,163" size="447,444" itemHeight="40" zPosition="10" CoolFont="Regular2;23" CoolServiceFont="Regular;23" CoolEventFont="Regular2;22" CoolServiceSize="347" CoolEventSize="560" CoolServicePos="20" CoolServiceHPos="6" CoolEventPos="900" CoolEventHPos="4" CoolBarPos="1230" CoolBarBorderWidth="1" CoolBarColor="#ffda05" CoolBarHPos="12" CoolBarSize="120" CoolBarHigh="13" CoolTimePos="1205" CoolTimeHPos="6" CoolTimeSize="174" CoolDurationPos="1100" CoolDurationSize="100" CoolServiceColor="#d7d7e0" CoolDurationColor="#d7d7e0" CoolEventColor="#d7d7e0" CoolRecPreColor="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#909090" CoolCurrentCol="#0179e9" transparent="1" />
   <ePixmap pixmap="TechniHD/buttons/red.png" zPosition="4" position="97,634" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="266,634" size="40,40" alphatest="blend" />
@@ -7618,10 +7623,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget name="key_blue" position="663,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
   <ePixmap pixmap="TechniHD/buttons/ok.png" zPosition="4" position="1051,112" size="30,32" alphatest="blend" />  
   <eLabel text="Zap" position="1088,114" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
-  <widget source="Title" render="Label" position="70,115" size="421,32" zPosition="6" font="Regular;20" foregroundColor="#ffffff" backgroundColor="hblau" halign="left" transparent="1" />
-  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="500,112" size="40,40" alphatest="blend" />
-  <eLabel text="CoolInfoGuide" position="536,114" size="176,24" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
-  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1098,634" size="80,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/plusminus.png" zPosition="4" position="67,111" size="61,29" alphatest="blend" />
+  <eLabel text="Select a bouquet" position="133,114" size="231,24" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <ePixmap pixmap="TechniHD/buttons/infobutton.png" zPosition="4" position="521,112" size="40,40" alphatest="blend" />
+  <eLabel text="CoolInfoGuide" position="557,114" size="176,24" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />
+  <ePixmap pixmap="TechniHD/buttons/menu.png" zPosition="4" position="1120,634" size="80,40" alphatest="blend" />
 </screen>
 <screen name="CoolTVGuideDisabled" position="0,0" size="1280,720" title="Cool TV Guide" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
   <widget source="Title" render="Label" position="255,591" size="835,27" font="hd;22" halign="left" shadowColor="black" shadowOffset="-1,-1" backgroundColor="hblau" transparent="1" zPosition="10" />
