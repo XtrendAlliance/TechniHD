@@ -7411,7 +7411,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget name="key_blue" position="660,637" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 </screen>
 <screen name="CoolMultiGuideDisabled" position="0,0" size="1280,720" title="Cool Multi Guide" flags="wfNoBorder" backgroundColor="transparent">
-  <widget name="date" position="1065,677" size="180,30" font="Regular;26" halign="left" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" zPosition="6" />
+  <widget name="date" position="40,276" size="156,24" font="Regular; 20" halign="left" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" zPosition="6" />
   <widget source="Event" render="Label" position="33,78" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
     <convert type="EventTime">StartTime</convert>
     <convert type="ClockToText">Format:%H:%M</convert>
@@ -7437,16 +7437,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget source="session.VideoPicture" render="Pig" position="884,75" size="355,190" backgroundColor="#ff000000" />
   <eLabel position="34,114" size="791,2" zPosition="9" backgroundColor="grey" />
   <eLabel position="36,300" size="1204,355" zPosition="-2" backgroundColor="dblau" />
-  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,16" size="103,44" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="ClockToText">Default</convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,16" size="75,44" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="THDClockToText">ShortDay</convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,16" size="157,44" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="THDClockToText">Format:%d.%m.%Y</convert>
   </widget>
-  <eLabel text="C  o  o  l    M  u  l  t  i    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="141,14" zPosition="5" size="472,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <eLabel text="Cool Multi Guide" shadowColor="#000000" shadowOffset="3,2" position="141,17" zPosition="5" size="215,37" font="Regular; 25" backgroundColor="background" transparent="1" />
+  <eLabel shadowColor="#000000" shadowOffset="3,2" position="356,20" zPosition="5" size="26,27" font="Console; 29" backgroundColor="background" transparent="1" text="&gt;" valign="top" halign="left" />
+  <widget source="Title" render="Label" shadowColor="#000000" shadowOffset="3,2" position="386,17" size="446,33" zPosition="6" font="Regular; 25" backgroundColor="background" halign="left" transparent="1" />  
   <widget name="timeline_now" position="0,298" zPosition="2" size="19,360" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
   <widget name="list" position="37,298" size="1200,360" CoolBorderColR="grey" CoolBorderColL="grey" scrollbarMode="showNever" transparent="1" />
   <widget name="timeline_text" position="9,273" size="1230,30" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" />
@@ -7454,14 +7456,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="201,678" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="371,678" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="546,678" size="40,40" alphatest="blend" />
-  <widget name="key_red" position="63,678" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
-  <widget name="key_green" position="232,678" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
-  <widget name="key_yellow" position="404,678" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
-  <widget name="key_blue" position="578,678" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-  <widget source="Title" render="Label" position="773,678" size="278,26" zPosition="6" font="hdi; 22" foregroundColor="#ffffff" backgroundColor="hblau" halign="center" transparent="1" />
+  <widget name="key_red" position="63,679" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="232,679" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="404,679" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
+  <widget name="key_blue" position="578,679" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+  <eLabel text="day" position="1084,680" size="101,26" zPosition="6" font="Regular;22" halign="center" backgroundColor="black" transparent="1" valign="center" />
+  <ePixmap pixmap="TechniHD/buttons/back.png" zPosition="6" position="1024,678" size="60,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/next.png" zPosition="6" position="1186,678" size="60,40" alphatest="blend" />
 </screen>
 <screen name="CoolNiceGuideDisabled" position="0,0" size="1280,720" title="Cool Nice Guide" flags="wfNoBorder" backgroundColor="transparent">
-  <widget name="date" position="1065,677" size="180,30" font="Regular;26" halign="left" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" zPosition="6" />
+  <widget name="date" position="40,276" size="156,24" font="Regular; 20" halign="left" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" zPosition="6" />
   <widget source="Event" render="Label" position="33,78" size="75,24" font="Regular2;21" halign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1">
     <convert type="EventTime">StartTime</convert>
     <convert type="ClockToText">Format:%H:%M</convert>
@@ -7487,16 +7491,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <widget source="session.VideoPicture" render="Pig" position="884,75" size="355,190" backgroundColor="#ff000000" />
   <eLabel position="34,114" size="791,2" zPosition="9" backgroundColor="grey" />
   <eLabel position="36,300" size="1204,355" zPosition="-2" backgroundColor="dblau" />
-  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,10" size="103,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="1080,16" size="103,44" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="ClockToText">Default</convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,10" size="75,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="862,16" size="75,44" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="THDClockToText">ShortDay</convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,10" size="157,50" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
+  <widget source="global.CurrentTime" render="Label" shadowColor="black" shadowOffset="3,2" zPosition="5" position="937,16" size="157,44" font="Regular; 28" halign="right" backgroundColor="background" transparent="1">
     <convert type="THDClockToText">Format:%d.%m.%Y</convert>
   </widget>
-  <eLabel text="C  o  o  l    N  i  c  e    G  u  i  d  e" shadowColor="black" shadowOffset="3,2" position="141,14" zPosition="5" size="472,40" font="Regular; 28" backgroundColor="background" transparent="1" />
+  <eLabel text="Cool Nice Guide" shadowColor="#000000" shadowOffset="3,2" position="141,17" zPosition="5" size="215,37" font="Regular; 25" backgroundColor="background" transparent="1" />
+  <eLabel shadowColor="#000000" shadowOffset="3,2" position="356,20" zPosition="5" size="26,27" font="Console; 29" backgroundColor="background" transparent="1" text="&gt;" valign="top" halign="left" />
+  <widget source="Title" render="Label" shadowColor="#000000" shadowOffset="3,2" position="386,17" size="446,33" zPosition="6" font="Regular; 25" backgroundColor="background" halign="left" transparent="1" />  
   <widget name="timeline_now" position="0,298" zPosition="2" size="19,360" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
   <widget name="list" position="37,298" size="1200,360" CoolBorderColR="grey" CoolBorderColL="grey" scrollbarMode="showNever" transparent="1" />
   <widget name="timeline_text" position="9,273" size="1230,30" foregroundColor="#00e5b243" backgroundColor="#000000" transparent="1" />
@@ -7504,11 +7510,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <ePixmap pixmap="TechniHD/buttons/green.png" zPosition="4" position="201,678" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/yellow.png" zPosition="4" position="371,678" size="40,40" alphatest="blend" />
   <ePixmap pixmap="TechniHD/buttons/blue.png" zPosition="4" position="546,678" size="40,40" alphatest="blend" />
-  <widget name="key_red" position="63,678" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
-  <widget name="key_green" position="232,678" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
-  <widget name="key_yellow" position="404,678" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
-  <widget name="key_blue" position="578,678" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-  <widget source="Title" render="Label" position="773,678" size="278,26" zPosition="6" font="hdi; 22" foregroundColor="#ffffff" backgroundColor="hblau" halign="center" transparent="1" />
+  <widget name="key_red" position="63,679" size="133,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" />  
+  <widget name="key_green" position="232,679" size="137,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />  
+  <widget name="key_yellow" position="404,679" size="138,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" valign="center" /> 
+  <widget name="key_blue" position="578,679" size="174,26" zPosition="4" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+  <eLabel text="day" position="1084,680" size="101,26" zPosition="6" font="Regular;22" halign="center" backgroundColor="black" transparent="1" valign="center" />
+  <ePixmap pixmap="TechniHD/buttons/back.png" zPosition="6" position="1024,678" size="60,40" alphatest="blend" />
+  <ePixmap pixmap="TechniHD/buttons/next.png" zPosition="6" position="1186,678" size="60,40" alphatest="blend" />
 </screen>
 <screen name="CoolEasyGuideDisabled" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel position="64,159" size="428,451" zPosition="8" backgroundColor="grey" />
